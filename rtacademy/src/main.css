@@ -145,3 +145,25 @@ body {
   color: #0B121F;
   font-size: 17px;
 }
+
+.btn-student {
+  display: block;
+  position: relative;
+  left: 300px;
+  bottom: 72px;
+  max-width: 160px; 
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 1rem; 
+  border-radius: 6px; 
+  text-align: center;
+  background-color: #1a2332;
+}
+.btn-student a {
+  text-decoration: none;
+  font-family: 'neue-haas-unica', sans-serif;
+  color: #a4b1cd;
+  font-size: 17px;
+}

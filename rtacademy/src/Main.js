@@ -41,6 +41,9 @@ function App() {
         <div className="btn-bussiness">
         <a href="testing">For School</a>
       </div>
+      <div className="btn-student">
+        <a href="testing">For Student</a>
+      </div>
       </div>
     </div>
   );
