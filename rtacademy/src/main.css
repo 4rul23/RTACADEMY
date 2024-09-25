@@ -118,3 +118,8 @@ body {
     font-size: 70px;
   }
 }
+
+.navbar-logo {
+  margin-top: 7px;
+  margin-left: 20px;
+}
