@@ -4,14 +4,30 @@
 }
 
 body {
-  /* background: linear-gradient(to bottom, #0B121F, #212529); */
-  color: #0a50e7;
-  font-family: 'neue-haas-unica', sans-serif;
-  font-size: 16px;
-  min-height: 100vh; /* Ensure the gradient covers the full viewport height */
+  min-height: 100vh; 
+  font-family: neue-haas-unica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
 }
 
+.app {
+  min-height: 100vh;
+  position: relative;
+}
 
+.bg-filter-home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(180deg, rgba(11,18,31,0.8) 0%, rgba(11,18,31,0.6) 50%, rgba(11,18,31,0.8) 100%);
+}
 
 .navbar {
   display: flex;
@@ -58,11 +74,46 @@ body {
 }
 
 .video {
-  width: 100%;
   position: absolute;
-  height: auto;
-  max-height: 1448px;
-  top: 42px;
+  top: 0;
   left: 0;
-  z-index: -9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-top: 20px;
+  
+}
+
+.main-heading {
+  font-size: 42px;
+  line-height: 1;
+  color: #A4B1CD;
+  margin-top: 2rem;
+}
+
+@media (min-width: 375px) {
+  .main-heading {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-heading {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-heading {
+    font-size: 80px;
+    line-height: 1.2;
+  }
 }
