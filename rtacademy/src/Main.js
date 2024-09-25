@@ -26,12 +26,17 @@ function App() {
           Your browser does not support the video tag.
         </video>
         <div className="content">
-          <h1 className="main-heading">
-            Your Informatics<br />
-            Performance<br />
-            Center
-          </h1>
-        </div>
+  <h1 className="main-heading">
+    Your Informatics<br />
+    Student <br />
+    Performance
+    Center
+  </h1>
+  <p className="description">
+    Kita menyediakan platform untukk membuat dan mengembangkan<br/>
+    Individu atau organisasi Pengembangan Informatika yang berkinerja tinggi.
+  </p>
+</div>
       </div>
     </div>
   );
