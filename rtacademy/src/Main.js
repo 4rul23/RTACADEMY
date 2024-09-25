@@ -39,10 +39,10 @@ function App() {
           </p>
         </div>
         <div className="btn-bussiness">
-        <a href="testing">For School</a>
+        <a href="testing">Untuk Sekolah</a>
       </div>
       <div className="btn-student">
-        <a href="testing">For Student</a>
+        <a href="testing">Untuk Siswa</a>
       </div>
       </div>
     </div>

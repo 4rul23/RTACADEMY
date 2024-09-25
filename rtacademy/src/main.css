@@ -83,7 +83,6 @@ body {
 
 .content {
   position: relative;
-  z-index: 1;
   margin: 20px 0 20px 100px;
 }
 
@@ -95,33 +94,24 @@ body {
 }
 
 .description {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 20px;
   color: #a4b1cd;
   margin: 20px 0 1rem 10px;
 }
 
-@media (min-width: 375px) {
-  .main-heading {
-    font-size: 48px;
-  }
-}
 
-@media (min-width: 576px) {
   .main-heading {
-    font-size: 70px;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 78px;
   }
-}
 
-@media (min-width: 768px) {
-  .main-heading {
-    font-size: 70px;
-  }
-}
+
 
 .navbar-logo {
   margin-top: 7px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .btn-bussiness {
