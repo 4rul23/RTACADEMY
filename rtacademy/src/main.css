@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background: linear-gradient(to bottom, #0B121F, #212529); */
+  color: #0a50e7;
+  font-family: 'neue-haas-unica', sans-serif;
+  font-size: 16px;
+  min-height: 100vh; /* Ensure the gradient covers the full viewport height */
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 84px;
+  background: linear-gradient(to bottom, #0B121F, #212529);
+}
+
+.navbar-logo span {
+  color: #A4B1CD; 
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #A4B1CD;
+  position: relative;
+  right: 30%;
+  margin: 2px 15px;
+  padding: 40px 8px; 
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fff; 
+}
+
+.get-started {
+  background-color: #0047b2; 
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.get-started:hover {
+  background-color: #0047b2; 
+}
+
+.video {
+  width: 100%;
+  position: absolute;
+  height: auto;
+  max-height: 1448px;
+  top: 42px;
+  left: 0;
+  z-index: -9;
+}
