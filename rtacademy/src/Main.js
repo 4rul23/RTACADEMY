@@ -38,6 +38,9 @@ function App() {
             Individu atau organisasi Pengembangan Informatika yang berkinerja tinggi.
           </p>
         </div>
+        <div className="btn-bussiness">
+        <a href="testing">For School</a>
+      </div>
       </div>
     </div>
   );
