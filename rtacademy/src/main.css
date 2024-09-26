@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'neue-haas-unica', sans-serif;
 }
 
 body {
@@ -45,6 +46,12 @@ body {
 .navbar-links, .navbar-links2 {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-family: 'sans-serif',;
+  font-size: 16px;
+  text-size-adjust: 100%;
+  text-align: left;
+
 }
 
 .navbar-links {
@@ -57,6 +64,7 @@ body {
   margin: 0 15px;
   text-decoration: none;
   transition: color 0.3s ease;
+
 }
 
 .nav-link:hover {
