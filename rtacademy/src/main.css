@@ -47,6 +47,11 @@ body {
   align-items: center;
 }
 
+.navbar-links {
+  gap: 30px;
+  margin-right: 85px;
+}
+
 .nav-link {
   color: #A4B1CD;
   margin: 0 15px;
