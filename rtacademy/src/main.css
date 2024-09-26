@@ -68,7 +68,7 @@ body {
 }
 
 .get-started:hover {
-  background-color: #0047b2;
+  background-color: #0cc2e6;
 }
 
 .video {
@@ -99,6 +99,7 @@ body {
   line-height: 20px;
   color: #a4b1cd;
   margin: 20px 0 1rem 10px;
+
 }
 
 .btn-bussiness {
@@ -187,7 +188,7 @@ body {
 }
 
 .trial-link:hover {
-  color: #9fef00;
+  color: #00c3ef;
 }
 
 .arrow-icon {

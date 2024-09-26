@@ -1,5 +1,6 @@
 import './main.css';
 import logo from './logos.png';
+import bgvideo from './bgcyber.mp4'
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           </div>
         </div>
         <video className="video" autoPlay muted loop>
-          <source src="https://cdn.hackthebox.com/website/LO_RES_Textless_Cyber_Performance_Center.mp4" type="video/mp4" />
+          <source src={bgvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="content">
@@ -46,7 +47,7 @@ function App() {
         </div>
         <div className="trial-container">
             <div className="trial-badge">
-              <span className="badge-text">New</span>
+              <span className="badge-text">new</span>
             </div>
             <a 
               className="trial-link" 
