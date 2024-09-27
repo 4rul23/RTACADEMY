@@ -1,4 +1,3 @@
-
 # RT ACADEMY
 
 ![SKIBIDI SIGMA ACADEMY](https://github.com/user-attachments/assets/d55e24bb-580b-4c25-8fe9-034850d4b25d)
