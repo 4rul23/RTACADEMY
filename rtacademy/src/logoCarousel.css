@@ -1,0 +1,76 @@
+.logo-carousel-container {
+  background: linear-gradient(to bottom, transparent 0%, rgba(11,18,31,0.8) 50%, rgb(1, 1, 3) 100%);
+  padding-top: 30px;
+  z-index: 10;
+}
+
+.logo-carousel-wrapper {
+  background-color: rgba(11, 18, 31, 0.8); /* Dark blue with 80% opacity */
+  padding: 20px 0;
+}
+
+.logo-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0;
+  background: transparent;
+  position: relative;
+}
+
+.logo-carousel::before,
+.logo-carousel::after {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logo-carousel::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(11,18,31,0), rgba(11,18,31,1));
+}
+
+.logo-carousel::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(11,18,31,0), rgba(11,18,31,1));
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 100s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  margin: 0 2.5rem;
+}
+
+.logo-item img {
+  height: 100px;
+  max-width: 125px;
+  object-fit: contain;
+  /* Remove the filter for now */
+  /* filter: brightness(0) invert(1); */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-item {
+    margin: 0 1rem;
+  }
+
+  .logo-item img {
+    max-width: 100px;
+    height: auto;
+  }
+}

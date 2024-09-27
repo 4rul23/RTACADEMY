@@ -1,6 +1,7 @@
 import './main.css';
 import logo from './logos.png';
 import bgvideo from './bgcyber.mp4'
+import LogoCarousel from './logocarousel';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <source src={bgvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className="bg-gradient-dark"></div>
         <div className="content">
           <h1 className="main-heading">
             Your Informatics<br />
@@ -61,6 +63,9 @@ function App() {
                 <path className="arrow-icon-stem" d="M1.75 8H11" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             </a>
+          </div>
+          <div>
+            <LogoCarousel/>
           </div>
       </div>
     </div>
