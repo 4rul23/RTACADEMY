@@ -7,7 +7,6 @@ import LogoCarousel from './logocarousel';
 function App() {
   return (
     <div className="app">
-      <div></div>
       <div className="bg-filter-home">
         <div className="navbar">
           <div className="navbar-logo">
@@ -49,7 +48,7 @@ function App() {
         <div className="btn-student">
           <a href="testing">Untuk Siswa</a>
         </div>
-        <div>
+
         <div className="trial-container">
             <div className="trial-badge">
               <span className="badge-text">new</span>
@@ -67,12 +66,13 @@ function App() {
               </svg>
             </a>
           </div>
+          <div className='trial2'>
           <div className='bg-dark-trial'>
 
           </div>
-          </div>
 
             <LogoCarousel/>
+          </div>
           </div>
     </div>
   );

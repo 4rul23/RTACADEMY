@@ -5,12 +5,12 @@
 .logo-carousel {
   width: 100%;
   overflow: hidden;
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 80px;
   background: transparent;
   position: relative;
   z-index: 3;
   background-color: rgb(11, 18, 31);
-
 }
 
 
@@ -38,7 +38,7 @@
 
 .logo-track {
   display: flex;
-  animation: scroll 100s linear infinite;
+  animation: scroll 25s linear infinite;
 }
 
 .logo-item {
