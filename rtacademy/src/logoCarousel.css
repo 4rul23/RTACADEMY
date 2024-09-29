@@ -21,6 +21,7 @@
   height: 100%;
   content: "";
   z-index: 2;
+  background-image: linear-gradient(to right, rgb(11, 18, 31), rgba(11, 18, 31, 0.792));
 }
 
 .logo-carousel::before {
