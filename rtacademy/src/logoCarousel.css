@@ -8,7 +8,8 @@
   padding: 30px 0;
   background: transparent;
   position: relative;
-  z-index: 1;
+  z-index: 3;
+  background-color: rgb(11, 18, 31);
 }
 
 
