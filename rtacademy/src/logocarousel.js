@@ -4,11 +4,11 @@ import './logoCarousel.css';
 function LogoCarousel() {
   const logos = [
     { src: `${process.env.PUBLIC_URL}/images/TELU.png`, alt: 'Telkom University' },
-    { src: `${process.env.PUBLIC_URL}/images/ITB.png`, alt: 'ITB' },
+    { src: `${process.env.PUBLIC_URL}/images/STEI.png`, alt: 'ITB' },
+    { src: `${process.env.PUBLIC_URL}/images/ITSG.png`, alt: 'ITS' },
     { src: `${process.env.PUBLIC_URL}/images/SMKT.png`, alt: 'SMK TMKS' },
-    { src: `${process.env.PUBLIC_URL}/images/SMK2.png`, alt: 'SMK TMKS' },
-    { src: `${process.env.PUBLIC_URL}/images/SMA17.png`, alt: 'SMAN17' },
-    { src: `${process.env.PUBLIC_URL}/images/ITS.png`, alt: 'UNHAS' },
+    { src: `${process.env.PUBLIC_URL}/images/BINUS.png`, alt: 'BINUS' },
+    { src: `${process.env.PUBLIC_URL}/images/ugm.png`, alt: 'UGM' },
   ];
 
   const logoItems = [...logos, ...logos];
