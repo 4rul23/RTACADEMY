@@ -3,10 +3,11 @@ import logo from './logos.png';
 import bgvideo from './bgcyber.mp4'
 import LogoCarousel from './logocarousel';
 
+
 function App() {
   return (
     <div className="app">
-      <div className="bg-filter-home bg-gradient-dark">
+      <div className="bg-filter-home">
         <div className="navbar">
           <div className="navbar-logo">
             <img src={logo} alt="RT ACADEMY Logo" className="logo" />
@@ -28,7 +29,7 @@ function App() {
           <source src={bgvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="bg-gradient-dark"></div>
+        <div className="video-overlay"></div>
         <div className="content">
           <h1 className="main-heading">
             Your Informatics<br />
@@ -47,6 +48,7 @@ function App() {
         <div className="btn-student">
           <a href="testing">Untuk Siswa</a>
         </div>
+        <div>
         <div className="trial-container">
             <div className="trial-badge">
               <span className="badge-text">new</span>
@@ -64,12 +66,16 @@ function App() {
               </svg>
             </a>
           </div>
-          <div>
+          <div className='bg-dark-trial'>
+            
+          </div>
+          </div>
+
             <LogoCarousel/>
           </div>
-      </div>
     </div>
   );
 }
 
 export default App;
+

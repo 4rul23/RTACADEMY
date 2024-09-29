@@ -3,12 +3,12 @@ import './logoCarousel.css';
 
 function LogoCarousel() {
   const logos = [
-    { src: `${process.env.PUBLIC_URL}/images/telkomuniverseity.png`, alt: 'Telkom University' },
-    { src: `${process.env.PUBLIC_URL}/images/ITB.jpg`, alt: 'ITB' },
-    { src: `${process.env.PUBLIC_URL}/images/SMKTMKS.png`, alt: 'SMK TMKS' },
-    { src: `${process.env.PUBLIC_URL}/images/SMK2MKS.jpg`, alt: 'SMK TMKS' },
-    { src: `${process.env.PUBLIC_URL}/images/SMAN17.jpg`, alt: 'SMAN17' },
-    { src: `${process.env.PUBLIC_URL}/images/unhas.jpg`, alt: 'UNHAS' },
+    { src: `${process.env.PUBLIC_URL}/images/TELU.png`, alt: 'Telkom University' },
+    { src: `${process.env.PUBLIC_URL}/images/ITB.png`, alt: 'ITB' },
+    { src: `${process.env.PUBLIC_URL}/images/SMKT.png`, alt: 'SMK TMKS' },
+    { src: `${process.env.PUBLIC_URL}/images/SMK2.png`, alt: 'SMK TMKS' },
+    { src: `${process.env.PUBLIC_URL}/images/SMA17.png`, alt: 'SMAN17' },
+    { src: `${process.env.PUBLIC_URL}/images/ITS.png`, alt: 'UNHAS' },
   ];
 
   const logoItems = [...logos, ...logos];
