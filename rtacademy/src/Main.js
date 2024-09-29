@@ -7,6 +7,7 @@ import LogoCarousel from './logocarousel';
 function App() {
   return (
     <div className="app">
+      <div></div>
       <div className="bg-filter-home">
         <div className="navbar">
           <div className="navbar-logo">
@@ -67,7 +68,7 @@ function App() {
             </a>
           </div>
           <div className='bg-dark-trial'>
-            
+
           </div>
           </div>
 
