@@ -21,6 +21,7 @@ function App() {
           </div>
           <div className="navbar-links2">
             <a href="test.js" className="nav-link">Business</a>
+            <span className="auth-separator"></span>
             <a href="test.js" className="nav-link">Login</a>
             <a href="test.js" className="nav-link get-started">Get Started</a>
           </div>

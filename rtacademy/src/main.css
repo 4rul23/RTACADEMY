@@ -41,6 +41,7 @@ body {
   padding: 0 50px;
   height: 84px;
   background: rgb(11, 18, 31);
+  min-width: 1290px;
 }
 
 .navbar-logo {
@@ -51,7 +52,7 @@ body {
 .navbar-links, .navbar-links2 {
   display: flex;
   align-items: center;
-  font-weight: 500;
+  font-weight: bold;
   font-family: 'sans-serif',;
   font-size: 16px;
 }
@@ -73,12 +74,20 @@ body {
   color: #fff;
 }
 
+.auth-separator {
+  height: 50px; 
+  width: 1px;
+  background-color: #30363d; 
+  margin: 0 5px; 
+}
+
 .get-started {
   background-color: #0cc2e6;
   color: #000;
   padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+  max-width: 144px;
+  border-radius: 4px;
+  font-weight: 500;
   transition: background-color 0.3s ease;
 }
 

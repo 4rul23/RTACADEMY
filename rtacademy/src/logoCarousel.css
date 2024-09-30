@@ -19,7 +19,7 @@
   position: absolute;
   top: 0;
   width: 150px;
-  height: 100%;
+  height: 200%;
   content: "";
   z-index: 2;
 }
@@ -38,7 +38,7 @@
 
 .logo-track {
   display: flex;
-  animation: scroll 25s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .logo-item {
@@ -47,9 +47,10 @@
 }
 
 .logo-item img {
-  height: 80px;
+  height: 100px;
   max-width: 125px;
   object-fit: contain;
+  padding-bottom: 43px;
   /* Remove the filter for now */
   /* filter: brightness(0) invert(1); */
 }
