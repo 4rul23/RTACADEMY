@@ -11,10 +11,10 @@ TLDR
 
 
 
+
 ## Preview of the website (Beta)
 
-![Screenshot 2024-09-27 175425](https://github.com/user-attachments/assets/b1c914ab-7933-4f44-b0a2-644167728051)
-
+![Screenshot 2024-09-30 080838](https://github.com/user-attachments/assets/37ef0f4f-866a-40f8-a5ab-c9875bf9c0eb)
 
 
 
