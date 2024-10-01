@@ -78,6 +78,9 @@ function App() {
           <div>
             <ContainerNews/>
           </div>
+          <div>
+            <PerformanceContainer/>
+          </div>
 
     </div>
   );
@@ -98,6 +101,32 @@ const ContainerNews = () => {
   );
 };
 
+const PerformanceContainer = () => {
+  return (
+    <div className="performance-container">
+    <div className="stat-container">
+      <h2 className="stat-number">34%</h2>
+      <p className="stat-description">
+        Siswa/Siswi di indonesia yang memahami konsep dari web programming dan algoritma bahasa pemrogaman.
+      </p>
+    </div>
+    <div className="performance-graph-container">
+      <h2 className="graph-title">Beat the odds. Optimize your performance.</h2>
+      <div className="performance-graph">
+        {/* This is a placeholder for the graph. In a real application, you'd use a charting library like recharts */}
+        <svg viewBox="0 0 100 30" className="graph-svg">
+          <path
+            d="M0,15 Q25,25 50,20 T100,10"
+            fill="none"
+            stroke="#9eff00"
+            strokeWidth="2"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  )
+}
 
 export default App;
 
