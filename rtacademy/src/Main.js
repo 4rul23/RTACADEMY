@@ -69,9 +69,7 @@ function App() {
           </div>
           <div className='trial2'>
           <div className='bg-dark-trial'>
-
           </div>
-
             <LogoCarousel/>
           </div>
           </div>
@@ -118,7 +116,7 @@ const PerformanceContainer = () => {
           <path
             d="M0,15 Q25,25 50,20 T100,10"
             fill="none"
-            stroke="#9eff00"
+            stroke="#00c3ef"
             strokeWidth="2"
           />
         </svg>
