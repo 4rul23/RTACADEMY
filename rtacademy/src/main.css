@@ -11,7 +11,6 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
-
 .app {
   background-color: rgb(11, 18, 31);
 }
@@ -97,13 +96,13 @@ body {
 
 .video {
   position: absolute;
-  top: 0;
+  top: 41px;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
+  overflow: clip;
   z-index: -9;
-  max-height: 1448px;
 }
 .video-overlay {
   position: absolute;
@@ -252,4 +251,42 @@ body {
 .trial2 {
   position: relative;
   bottom: 60px;
+}
+
+.container-news {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem; /* Adjust padding to control size */
+  background-color: rgb(32, 40, 55); /* Dark background */
+  border-radius: 0.75rem; /* Rounded corners */
+  color: #a4b1cd; /* Default text color */
+  font-family: 'neue-haas-unica', sans-serif;
+  font-weight: 500; /* Slightly bold */
+  font-size: 1.25rem; /* Text size */
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0 130px;
+  position: relative;
+  bottom: 30px;
+  z-index: 2;
+}
+
+
+.container-news a {
+  color: #00c3ef; /* Blue-green color for the link */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.container-news a:hover {
+  color: #00ff7f; /* Hover effect */
+}
+
+.arrow-icon {
+  margin-left: 0.5rem; /* Space before the arrow icon */
+  font-size: 1.25rem; /* Icon size */
+  color: #a4b1cd; /* Arrow color */
 }
