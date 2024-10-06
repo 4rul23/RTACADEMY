@@ -2,6 +2,8 @@ import './main.css';
 import logo from './logos.png';
 import bgvideo from './bgcyber.mp4'
 import LogoCarousel from './logocarousel';
+// import { LineChart, Line, YAxis, ResponsiveContainer } from 'recharts';
+import performanceimg from './performance.png'
 
 
 function App() {
@@ -99,30 +101,37 @@ const ContainerNews = () => {
   );
 };
 
+
+
+// const data = [
+//   { value: 20 },
+//   { value: 10 },
+//   { value: 30 },
+//   { value: 22 },
+//   { value: 15 },
+//   { value: 45 },
+//   { value: 35 },
+//   { value: 40 },
+//   { value: 38 }
+// ];
+
+
+
+
 const PerformanceContainer = () => {
   return (
     <div className="performance-container">
     <div className="stat-container">
       <h2 className="stat-number">34%</h2>
       <p className="stat-description">
-        Siswa/Siswi di indonesia yang memahami konsep dari web programming dan algoritma bahasa pemrogaman.
+        Siswa/Siswi di indonesia yang memahami konsep dari web programming  <br/>
       </p>
     </div>
     <div className="performance-graph-container">
-      <h2 className="graph-title">Beat the odds. Optimize your performance.</h2>
-      <div className="performance-graph">
-        {/* This is a placeholder for the graph. In a real application, you'd use a charting library like recharts */}
-        <svg viewBox="0 0 100 30" className="graph-svg">
-          <path
-            d="M0,15 Q25,25 50,20 T100,10"
-            fill="none"
-            stroke="#00c3ef"
-            strokeWidth="2"
-          />
-        </svg>
+        <h2 className="graph-title">Beat the odds.<br />Optimize your <br/> performance.</h2>
+        <img src={performanceimg} alt="RT ACADEMY Logo" className="performanceimg" />
       </div>
     </div>
-  </div>
   )
 }
 
