@@ -15,14 +15,14 @@ function App() {
             <img src={logo} alt="RT ACADEMY Logo" className="logo" />
           </div>
           <div className="navbar-links">
-            <a href="test.js" className="nav-link">Products</a>
-            <a href="test.js" className="nav-link">Solutions</a>
-            <a href="test.js" className="nav-link">Pricing</a>
+            <a href="test.js" className="nav-link">Produk</a>
+            <a href="test.js" className="nav-link">Tujuan</a>
+            <a href="test.js" className="nav-link">Harga</a>
             <a href="test.js" className="nav-link">Resources</a>
             <a href="test.js" className="nav-link">Company</a>
           </div>
           <div className="navbar-links2">
-            <a href="test.js" className="nav-link">Business</a>
+            <a href="test.js" className="nav-link">Sekolah</a>
             <span className="auth-separator"></span>
             <a href="test.js" className="nav-link">Login</a>
             <a href="test.js" className="nav-link get-started">Get Started</a>
@@ -79,7 +79,10 @@ function App() {
             <ContainerNews/>
           </div>
           <div>
-            <PerformanceContainer/>
+          <CyberIncidentsStats/>
+          </div>
+          <div>
+          <GamifiedUpskilling/>
           </div>
 
     </div>
@@ -101,39 +104,54 @@ const ContainerNews = () => {
   );
 };
 
-
-
-// const data = [
-//   { value: 20 },
-//   { value: 10 },
-//   { value: 30 },
-//   { value: 22 },
-//   { value: 15 },
-//   { value: 45 },
-//   { value: 35 },
-//   { value: 40 },
-//   { value: 38 }
-// ];
-
-
-
-
-const PerformanceContainer = () => {
+const CyberIncidentsStats = () => {
   return (
-    <div className="performance-container">
-    <div className="stat-container">
-      <h2 className="stat-number">34%</h2>
-      <p className="stat-description">
-        Siswa/Siswi di indonesia yang memahami konsep dari web programming  <br/>
-      </p>
-    </div>
-    <div className="performance-graph-container">
-        <h2 className="graph-title">Beat the odds.<br />Optimize your <br/> performance.</h2>
-        <img src={performanceimg} alt="RT ACADEMY Logo" className="performanceimg" />
+    <>
+      <div className="cybercontainer">
+        <div className="grid">
+          <div className="card">
+            <p className="percentage">50%</p>
+            <p className="descriptionincident">
+              and more of significant cyber incidents are caused by a lack of skills or human failure.
+            </p>
+          </div>
+          <div className="card">
+            <p className="performance-text">
+              Beat the odds <br/> Optimize your <br/> performance.
+            </p>
+            <div className='performanceimg'>
+              <img 
+                src={performanceimg} 
+                alt="Graph showing performance optimization" 
+                className="graph"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
+
+const GamifiedUpskilling = () => {
+  return (
+    <>
+      <div className="container">
+        <h1 className='h1game'>
+          Gamified, hands-on upskilling from cybersecurity fundamentals to advanced scenarios.
+        </h1>
+        <div className="button-container">
+          <button className="primary-button">
+            Get started 
+          </button>
+          <button className="secondary-button">
+            For teams
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default App;
 
