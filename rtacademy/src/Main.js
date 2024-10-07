@@ -19,13 +19,13 @@ function App() {
             <a href="test.js" className="nav-link">Tujuan</a>
             <a href="test.js" className="nav-link">Harga</a>
             <a href="test.js" className="nav-link">Resources</a>
-            <a href="test.js" className="nav-link">Company</a>
+            <a href="test.js" className="nav-link">Perusahaan</a>
           </div>
           <div className="navbar-links2">
             <a href="test.js" className="nav-link">Sekolah</a>
             <span className="auth-separator"></span>
             <a href="test.js" className="nav-link">Login</a>
-            <a href="test.js" className="nav-link get-started">Get Started</a>
+            <a href="test.js" className="nav-link get-started">Mulai</a>
           </div>
         </div>
         <video className="video" autoPlay muted loop>
@@ -82,7 +82,7 @@ function App() {
           <CyberIncidentsStats/>
           </div>
           <div>
-          <GamifiedUpskilling/>
+          <CybersecurityDashboard/>
           </div>
 
     </div>
@@ -133,23 +133,44 @@ const CyberIncidentsStats = () => {
   );
 };
 
-const GamifiedUpskilling = () => {
+const CybersecurityDashboard = () => {
   return (
-    <>
-      <div className="container">
-        <h1 className='h1game'>
-          Gamified, hands-on upskilling from cybersecurity fundamentals to advanced scenarios.
-        </h1>
-        <div className="button-container">
-          <button className="primary-button">
-            Get started 
-          </button>
-          <button className="secondary-button">
-            For teams
-          </button>
+    <div className="cyber-dashboard">
+      <h1 className="cyber-heading">
+      Pembelajaran web development <br/> interaktif untuk siswa SMA/SMK di Indonesia
+      </h1>
+      <div className="cyber-buttons">
+        <button className="cyber-button cyber-button-primary">
+          Mulai Belajar <span className="cyber-arrow-right">→</span>
+        </button>
+        <button className="cyber-button cyber-button-secondary">
+          Untuk Sekolah
+        </button>
+      </div>
+      <div className="cyber-grid">
+        <div className="cyber-card">
+          <h2 className="cyber-card-title">Jalur pembelajaran</h2>
+          <p className="cyber-card-description">
+          Perjalanan belajar yang terstruktur, mulai dari dasar HTML/CSS hingga pengembangan aplikasi web kompleks dengan JavaScript dan framework modern.
+          </p>
+          <div className="cyber-image-placeholder">Image Placeholder</div>
+        </div>
+        <div className="cyber-card">
+          <h2 className="cyber-card-title">Proyek Kasus Nyata</h2>
+          <p className="cyber-card-description">
+          Kerjakan proyek web nyata yang menantang, diperbarui setiap minggu untuk mengikuti tren teknologi terkini dalam industri web development
+          </p>
+          <div className="cyber-image-placeholder">Image Placeholder</div>
+        </div>
+        <div className="cyber-card">
+          <h2 className="cyber-card-title">Sertifikasi Industri</h2>
+          <p className="cyber-card-description">
+          Dapatkan sertifikasi yang diakui industri untuk membuktikan keahlian Anda dalam pengembangan web dan meningkatkan peluang karir.
+          </p>
+          <div className="cyber-image-placeholder">Image Placeholder</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

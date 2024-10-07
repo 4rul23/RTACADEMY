@@ -332,9 +332,10 @@ body {
 }
 
 .performance-text {
-  font-size: 2rem;
+  font-size: 34px;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: #a4b1cd;
 }
 
 .performanceimg {
@@ -357,40 +358,86 @@ body {
   color: #a4b1cd; 
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2rem;
+
+.cyber-dashboard {
+  background-color: #0B121F;
+  color: #E7E7E7;
+  padding: 124px 102px;
+  font-family: 'neue-haas-unica', sans-serif;
 }
 
-.h1game {
-  font-size: 2.25rem;
-  font-weight: bold;
+.cyber-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
-.button-container {
+.cyber-buttons {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-button {
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+.cyber-button {
+  padding: 0.75rem 1.5rem;
   border: none;
+  border-radius: 4px;
+  font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.primary-button {
-  background-color: #84cc16;
-  color: black;
+.cyber-button-primary {
+  background-color: #0CC2E6;
+  color: #0B121F;
 }
 
-.secondary-button {
-  background-color: #1f2937;
-  color: #d1d5db;
+.cyber-button-secondary {
+  background-color: #1A2332;
+  color: #A4B1CD;
 }
 
+.cyber-arrow-right {
+  margin-left: 0.5rem;
+}
 
+.cyber-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cyber-card {
+  background-color: #1E293B;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.cyber-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #E7E7E7;
+}
+
+.cyber-card-description {
+  font-size: 1rem;
+  color: #A4B1CD;
+  margin-bottom: 1rem;
+}
+
+.cyber-image-placeholder {
+  background-color: #2A3649;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A4B1CD;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .cyber-grid {
+    grid-template-columns: 1fr;
+  }
+}
