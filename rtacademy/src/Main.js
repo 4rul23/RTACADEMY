@@ -2,9 +2,11 @@ import './main.css';
 import logo from './logos.png';
 import bgvideo from './bgcyber.mp4'
 import LogoCarousel from './logocarousel';
-// import { LineChart, Line, YAxis, ResponsiveContainer } from 'recharts';
 import performanceimg from './performance.png'
-
+import path from './path.png'
+import sertifikat from './certification.png'
+import simulasi from './Simulasi.png'
+import PreviewWeb from './preview'
 
 function App() {
   return (
@@ -84,6 +86,9 @@ function App() {
           <div>
           <CybersecurityDashboard/>
           </div>
+          <div>
+            <PreviewWeb/>
+          </div>
 
     </div>
   );
@@ -110,14 +115,14 @@ const CyberIncidentsStats = () => {
       <div className="cybercontainer">
         <div className="grid">
           <div className="card">
-            <p className="percentage">50%</p>
+            <p className="percentage">38%</p>
             <p className="descriptionincident">
-              and more of significant cyber incidents are caused by a lack of skills or human failure.
+              Siswa/Siswi di indonesia Kurang dalam problem solving Programming mereka
             </p>
           </div>
           <div className="card">
             <p className="performance-text">
-              Beat the odds <br/> Optimize your <br/> performance.
+              Tingkatkan <br/> Performa <br/> Programmingmu.
             </p>
             <div className='performanceimg'>
               <img 
@@ -153,26 +158,28 @@ const CybersecurityDashboard = () => {
           <p className="cyber-card-description">
           Perjalanan belajar yang terstruktur, mulai dari dasar HTML/CSS hingga pengembangan aplikasi web kompleks dengan JavaScript dan framework modern.
           </p>
-          <div className="cyber-image-placeholder">Image Placeholder</div>
+          <img src={path} alt="RT ACADEMY Logo" className="pathcard" />
         </div>
         <div className="cyber-card">
           <h2 className="cyber-card-title">Proyek Kasus Nyata</h2>
           <p className="cyber-card-description">
           Kerjakan proyek web nyata yang menantang, diperbarui setiap minggu untuk mengikuti tren teknologi terkini dalam industri web development
           </p>
-          <div className="cyber-image-placeholder">Image Placeholder</div>
+          <img src={simulasi} alt="RT-ACADEMY Simulation" className='Simulasicard'/>
         </div>
         <div className="cyber-card">
           <h2 className="cyber-card-title">Sertifikasi Industri</h2>
           <p className="cyber-card-description">
           Dapatkan sertifikasi yang diakui industri untuk membuktikan keahlian Anda dalam pengembangan web dan meningkatkan peluang karir.
           </p>
-          <div className="cyber-image-placeholder">Image Placeholder</div>
+          <img src={sertifikat} alt="RT-ACADEMY Simulation" className='SertifikatCard'/>
         </div>
       </div>
     </div>
   );
 };
+
+
 
 export default App;
 

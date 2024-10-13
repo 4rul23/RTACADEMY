@@ -1,0 +1,88 @@
+.preview-container {
+    background-color: #0B121F;
+    color: #E7E7E7;
+    padding: 80px 102px;
+    font-family: 'neue-haas-unica', sans-serif;
+  }
+  
+  .preview-header {
+    margin-bottom: 2rem;
+  }
+  
+  .preview-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .preview-button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .preview-btn-primary {
+    background-color: #06b6d4;
+    color: rgb(14, 10, 10);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-style: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .preview-btn-secondary {
+    background-color: #202837;
+    color: #A4B1CD;
+    padding: 0.5rem 2rem;
+    border: none;
+    font-weight: 600;
+    font-style: bold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .preview-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .preview-dashboard-image {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .preview-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .preview-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .preview-card {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  .preview-icon-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .preview-icon-text i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  

@@ -383,18 +383,39 @@ body {
   border: none;
   border-radius: 4px;
   font-weight: 500;
+  font-style: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cyber-button-primary {
+  display: block;
+  max-width: 160px; 
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 1rem; 
+  border-radius: 6px; 
+  text-align: center;
   background-color: #0CC2E6;
   color: #0B121F;
+  font-style: bold;
 }
 
 .cyber-button-secondary {
-  background-color: #1A2332;
-  color: #A4B1CD;
+  display: block;
+  max-width: 160px; 
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 1rem; 
+  border-radius: 6px; 
+  text-align: center;
+  background-color: #1a2332;
+  color: #a4b1cd;
+
 }
 
 .cyber-arrow-right {
@@ -441,3 +462,16 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.pathcard {
+  margin-top: 20px;
+}
+
+.Simulasicard {
+  margin-top: 20px;
+}
+
+.SertifikatCard {
+  margin-top: 20px;
+}
+
