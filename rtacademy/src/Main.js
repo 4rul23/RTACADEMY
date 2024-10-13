@@ -146,7 +146,7 @@ const CybersecurityDashboard = () => {
       </h1>
       <div className="cyber-buttons">
         <button className="cyber-button cyber-button-primary">
-          Mulai Belajar <span className="cyber-arrow-right">→</span>
+          Mulai Belajar 
         </button>
         <button className="cyber-button cyber-button-secondary">
           Untuk Sekolah

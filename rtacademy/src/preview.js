@@ -1,4 +1,7 @@
 import './preview.css';
+import preview from './preview.png';
+
+
 
 const PreviewWeb = () => {
     return (
@@ -14,7 +17,7 @@ const PreviewWeb = () => {
         </header>
         <main className="preview-main">
           <div className="preview-dashboard-image">
-            <img src="https://placehold.co/800x400" alt="Dashboard screenshot" className="preview-image" />
+            <img src={preview} alt="Dashboard screenshot" className="preview-image" />
           </div>
           <div className="preview-grid">
             <div className="preview-card">
