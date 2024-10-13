@@ -1,6 +1,6 @@
 import './preview.css';
 import preview from './preview.png';
-
+import bookicon from './book-icon.webp'
 
 
 const PreviewWeb = () => {
@@ -26,11 +26,9 @@ const PreviewWeb = () => {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum placeat.</p>
             </div>
             <div className="preview-card">
-              <h2>Why RT ACADEMY?</h2>
-              <div className="preview-icon-text">
-                <i className="fas fa-book-open"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum placeat.</p>
-              </div>
+              <h6 className='preview-h6'>Why RT ACADEMY?</h6>
+              <img src={bookicon} alt='bookicon' className='bookicon'></img>
+                <p className='preview-alasan'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptatum placeat.</p>
             </div>
           </div>
         </main>

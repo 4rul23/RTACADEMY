@@ -8,6 +8,7 @@ import sertifikat from './certification.png'
 import simulasi from './Simulasi.png'
 import PreviewWeb from './preview'
 
+
 function App() {
   return (
     <div className="app">

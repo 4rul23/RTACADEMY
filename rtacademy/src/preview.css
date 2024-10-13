@@ -75,8 +75,8 @@
   }
   
   .preview-card {
-    background-color: #1f2937;
-    padding: 1.5rem;
+    background-color: #141D28;
+    padding: 16px 16px 32px 32px;
     border-radius: 0.5rem;
   }
   
@@ -89,4 +89,23 @@
     font-size: 2rem;
     margin-right: 1rem;
   }
+
+  .preview-h6{
+    color:#A4B1CD;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: bold;
+  }
+
+  .bookicon {
+    width: 124px;
+    height: 66px;
+  }
   
+  .preview-alasan {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: bold;
+  }
