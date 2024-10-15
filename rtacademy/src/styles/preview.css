@@ -1,0 +1,122 @@
+.preview-container {
+    background-color: #0B121F;
+    color: #E7E7E7;
+    padding: 80px 102px;
+    font-family: 'neue-haas-unica', sans-serif;
+  }
+  
+  .preview-header {
+    margin-bottom: 2rem;
+  }
+  
+  .preview-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .preview-button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .preview-btn-primary {
+    background-color: #06b6d4;
+    color: rgb(14, 10, 10);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-style: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .preview-btn-secondary {
+    background-color: #202837;
+    color: #A4B1CD;
+    padding: 0.5rem 2rem;
+    border: none;
+    font-weight: 600;
+    font-style: bold;
+    font-size: 16px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .preview-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .preview-dashboard-image {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .preview-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .preview-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .preview-card {
+    background-color: #141D28;
+    padding: 16px 16px 32px 32px;
+    border-radius: 0.5rem;
+  }
+  
+  .preview-icon-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .preview-icon-text i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .preview-h6{
+    color:#A4B1CD;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  .bookicon2 {
+    width: 150px;
+    height: 66px;
+    object-fit: contain;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .bookicon {
+    width: 124px;
+    height: 66px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-alasan {
+    display: flex;
+    color: #FFFF;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: bold;
+    line-height: 24px;
+  }
