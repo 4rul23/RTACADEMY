@@ -1,0 +1,71 @@
+.review-container {
+    margin-left: 6.5rem;
+    margin-right: 6rem;
+}
+
+.review-heading {
+    margin: 0 0 24px 0;
+    color: white;
+}
+
+
+.web-container {
+    padding: 16px;
+  }
+  
+  /* Grid layout */
+  .web-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .web-gap {
+    margin-bottom: 32px;
+  }
+  
+  /* Card styles */
+  .web-card {
+    background-color: #141d28;
+    padding: 24px;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  /* Title and content styles */
+  .web-title {
+    font-size: 0.875rem;
+    color: #a0aec0;
+    margin-bottom: 8px;
+  }
+  
+  .web-number {
+    font-size: 68px;
+    color: #06B6D4;
+    font-weight: bold;
+    margin-top: 48px;
+  }
+  
+  .web-description {
+    font-size: 1.125rem;
+  }
+  
+  .web-flex {
+    display: flex;
+  }
+  
+  .web-flex-around {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  .web-image {
+    margin-left: 16px;
+    border-radius: 50%;
+  }
+  
+  .web-logo {
+    height: 48px;
+  }
+  

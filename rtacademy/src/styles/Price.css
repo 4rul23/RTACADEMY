@@ -1,0 +1,108 @@
+
+
+.harga {
+    background-color: #111927;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 2.5rem;
+}
+
+.paket-wrapper {
+    display: flex;
+    gap: 50px;
+    margin: 0px 100px 0px 150px;
+}
+
+.paket-card {
+    background-color: #1A2332;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    
+}
+
+.paket-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.paket-card .harga {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.paket-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.paket-card ul li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.paket-card .btn-primary, .btn-secondary {
+    margin-top: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #06b6d4;
+    color: #0A121F;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 300;
+    font-style: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    
+}
+
+.btn-primary:hover {
+    background-color: #008ecc;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #00aaff;
+    border: 1px solid #00aaff;
+}
+
+.btn-secondary:hover {
+    background-color: #001f33;
+}
+
+.sekolah .harga {
+    color: #00aaff;
+}
+
+.deskripsi-harga {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A4B1CD;
+    margin-bottom: 1rem;
+}
+
+.hargas {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: bold;
+}

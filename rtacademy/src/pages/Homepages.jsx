@@ -6,6 +6,7 @@ import CybersecurityDashboard from '../components/CyberSecurityDashboard';
 import PreviewWeb from '../components/sections/PreviewWeb';
 import bgvideo from '../assets/videos/bgcyber.mp4';
 import Navbar from '../components/common/navbar';
+import WebsiteReview from '../components/WebReview';
 
 function HomePage() {
   return (
@@ -45,6 +46,7 @@ function HomePage() {
       <CyberIncidentsStats/>
       <CybersecurityDashboard/>
       <PreviewWeb/>
+      <WebsiteReview/>
     </div>
   );
 }
