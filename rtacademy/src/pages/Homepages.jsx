@@ -36,7 +36,6 @@ function HomePage() {
         <a href="testing">Untuk Siswa</a>
       </div>
       <div className="trial-container">
-        {/* ... (kode trial container) ... */}
       </div>
       <div className='trial2'>
         <div className='bg-dark-trial'></div>

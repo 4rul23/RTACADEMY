@@ -48,6 +48,7 @@
   
   .web-description {
     font-size: 1.125rem;
+    margin-top: 7.5rem;
   }
   
   .web-flex {
@@ -62,10 +63,11 @@
 
   .web-image {
     margin-left: 16px;
-    border-radius: 50%;
+    width: 45%;
+    height: 100%;
   }
   
   .web-logo {
-    height: 48px;
+    height: 78px;
   }
   

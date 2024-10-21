@@ -1,5 +1,10 @@
 import React from "react";
 import '../styles/WebReview.css'
+import binus from '../assets/images/BINUS.png'
+import telkomschools from '../assets/images/ITSG.png'
+import placeholder from '../assets/images/STEI.png'
+import SMKT from '../assets/images/telkomschool.png'
+import nabil from '../assets/images/nabil.jpg'
 
 
 
@@ -28,49 +33,49 @@ const Dashboard = () => {
       <div className="web-container">
         <div className="web-grid web-gap mb-8">
           <div className="web-card">
-            <h2 className="web-title">Available candidates</h2>
+            <h2 className="web-title">Kandidat yang tersedia</h2>
             <p className="web-number">698k+</p>
           </div>
           <div className="web-card">
-            <h2 className="web-title">Onboarding & retention</h2>
+            <h2 className="web-title">Usecase dan pengalaman!</h2>
             <p className="web-description">
-              A blueprint for onboarding cybersecurity professionals: hire & retain!
+              Rangka awal dalam perjalanan sebuah Fullstack Enginer dari Siswa : Frontend & Backend
             </p>
           </div>
           <div className="web-card web-flex">
             <div>
-              <h2 className="web-title">Success story</h2>
+              <h2 className="web-title">Keberhasilan</h2>
               <p className="web-description">
-                From Military Operator to Head of Cyber Threat Intelligence: Gary's story
+                Dari Siswa Sma yang mengikuti kelas MIPA ke Fullstack Enginer
               </p>
             </div>
             <img
-              src="https://placehold.co/100x100"
+              src={nabil}
               alt="Portrait of a man"
               className="web-image"
             />
           </div>
         </div>
         <div className="web-card">
-          <h2 className="web-title mb-4">Companies hiring on Hack The Box</h2>
+          <h2 className="web-title mb-4">Institut yang menggunakan rt-academy</h2>
           <div className="web-flex-around">
             <img
-              src="https://placehold.co/150x50"
+              src={binus}
               alt="SecurityMetrics logo"
               className="web-logo"
             />
             <img
-              src="https://placehold.co/150x50"
+              src={telkomschools}
               alt="Synack logo"
               className="web-logo"
             />
             <img
-              src="https://placehold.co/150x50"
+              src={placeholder}
               alt="Lufthansa logo"
               className="web-logo"
             />
             <img
-              src="https://placehold.co/150x50"
+              src={SMKT}
               alt="Booking Holdings logo"
               className="web-logo"
             />
