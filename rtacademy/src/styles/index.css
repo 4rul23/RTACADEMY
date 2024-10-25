@@ -8,3 +8,34 @@
 @import './Price.css';
 @import './CoursesReview.css';
 
+@keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-100px) translateX(50px);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-200px) translateX(0);
+      opacity: 0.3;
+    }
+  }
+
+  .glow-effect {
+    position: relative;
+  }
+
+  .glow-effect::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(6,182,212,0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .glow-effect:hover::after {
+    opacity: 1;
+  }

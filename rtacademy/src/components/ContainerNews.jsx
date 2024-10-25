@@ -40,7 +40,7 @@ const ContainerNews = () => {
   return (
     <div className="w-full bg-gradient-to-b from-[#0A1525] to-[#0A1525]/95">
       <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        {/* Stats Banner */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ const ContainerNews = () => {
           />
         </motion.div>
 
-        {/* News Ticker */}
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,20 +98,20 @@ const ContainerNews = () => {
               >
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center flex-1 gap-3">
-                    {/* Tag */}
+
                     <span className={`px-2 py-1 text-xs font-semibold rounded bg-${newsItems[activeIndex].color}-500/20 text-${newsItems[activeIndex].color}-400`}>
                       {newsItems[activeIndex].tag}
                     </span>
                     
-                    {/* News Text */}
+
                     <p className="font-medium text-gray-200">
                       {newsItems[activeIndex].text}
                     </p>
                   </div>
 
-                  {/* Navigation */}
+
                   <div className="flex items-center gap-3">
-                    {/* Dots */}
+
                     <div className="flex gap-1">
                       {newsItems.map((_, idx) => (
                         <button
@@ -126,7 +126,7 @@ const ContainerNews = () => {
                       ))}
                     </div>
 
-                    {/* Arrow */}
+
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}

@@ -6,10 +6,9 @@ import telkom from '../../assets/images/telkomschool.png';
 
 const PreviewWeb = () => {
   return (
-    <div className="min-h-screen bg-[#0A1525] py-20 px-6 lg:px-8 relative overflow-hidden">
+    <div className="relative px-6 py-20 overflow-hidden lg:px-8">
       {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A1525] via-[#0A1525]/90 to-[#0A1525]"></div>
-      
+
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header Section */}
         <motion.header

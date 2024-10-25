@@ -6,6 +6,8 @@ import Price from './pages/price';
 import './styles/main.css'; 
 import Login from './pages/Login';
 import Register from './pages/Register';
+import OptionPage from './pages/Choose.jsx'
+import Academy from './pages/Academy.jsx'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/harga" element={<Price />} />
           <Route path="login" element={<Login/>} />
           <Route path="Register" element={<Register/>} />
+          <Route path="/choose-platform" element={<OptionPage />} />
+          <Route path="/Academy" element={<Academy />} />
         </Routes>
       </div>
     </Router>

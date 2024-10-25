@@ -19,15 +19,19 @@ const CyberIncidentsStats = () => {
   }, []);
 
   return (
-    <div className="px-4 py-16 mx-auto max-w-7xl">
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3">
+    <div className="relative px-4 py-16 mx-auto max-w-7xl">
+
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+
+      <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3 glow-effect">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50"
+          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50 glow-effect"
         >
           <div className="flex items-center gap-4 mb-2">
             <Award className="w-6 h-6 text-cyan-400" />
@@ -41,7 +45,7 @@ const CyberIncidentsStats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50"
+          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50 glow-effect"
         >
           <div className="flex items-center gap-4 mb-2">
             <TrendingUp className="w-6 h-6 text-green-400" />
@@ -55,7 +59,7 @@ const CyberIncidentsStats = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50"
+          className="p-6 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50 glow-effect"
         >
           <div className="flex items-center gap-4 mb-2">
             <Users className="w-6 h-6 text-blue-400" />
@@ -64,14 +68,14 @@ const CyberIncidentsStats = () => {
           <p className="text-2xl font-bold text-white">50+</p>
         </motion.div>
       </div>
+       
 
-      {/* Announcement Banner */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="p-4 mb-8 overflow-hidden bg-gray-800/30 backdrop-blur-sm rounded-xl"
+        className="p-4 mb-8 overflow-hidden bg-gray-800/30 backdrop-blur-sm rounded-xl glow-effect"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-1 gap-3">
@@ -102,15 +106,15 @@ const CyberIncidentsStats = () => {
         </div>
       </motion.div>
 
-      {/* Main Stats Grid */}
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Percentage Card */}
+
+      <div className="grid gap-6 md:grid-cols-2 glow-effect">
+ 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="p-8 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50"
+          className="p-8 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50 glow-effect"
         >
           <motion.p
             className="mb-4 text-6xl font-bold text-cyan-400"
@@ -126,13 +130,13 @@ const CyberIncidentsStats = () => {
           </p>
         </motion.div>
 
-        {/* Performance Card */}
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="p-8 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50"
+          className="p-8 transition-all duration-300 border bg-gray-800/50 backdrop-blur-sm rounded-xl border-gray-700/50 hover:border-cyan-500/50 glow-effect"
         >
           <p className="mb-6 text-3xl font-semibold text-white">
             Tingkatkan <br /> Performa <br /> Programmingmu.

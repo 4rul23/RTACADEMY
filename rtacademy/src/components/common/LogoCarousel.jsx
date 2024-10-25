@@ -11,9 +11,7 @@ import binusLogo from '../../assets/images/BINUS.png';
 import ugmLogo from '../../assets/images/ugm.png';
 
 function LogoCarousel() {
-  // You can adjust this value to control the speed
-  // Lower number = faster, Higher number = slower
-  const animationSpeed = 150; // You can try values like 10 for faster or 30 for slower
+  const animationSpeed = 250; 
 
   const logos = [
     { src: teluLogo, alt: 'Telkom University' },
@@ -24,18 +22,18 @@ function LogoCarousel() {
     { src: ugmLogo, alt: 'UGM' },
   ];
 
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos];
 
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Gradient fade on left */}
+
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0A1525] to-transparent z-10"></div>
       
-      {/* Gradient fade on right */}
+
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0A1525] to-transparent z-10"></div>
       
       <div className="flex gap-8">
-        {/* First set of logos */}
+
         <motion.div
           className="flex gap-8 shrink-0"
           animate={{
@@ -43,7 +41,7 @@ function LogoCarousel() {
           }}
           transition={{
             x: {
-              duration: animationSpeed, // Adjusted speed here
+              duration: animationSpeed, 
               repeat: Infinity,
               ease: "linear"
             }
@@ -64,7 +62,6 @@ function LogoCarousel() {
           ))}
         </motion.div>
 
-        {/* Second set of logos for seamless loop */}
         <motion.div
           className="flex gap-8 shrink-0"
           animate={{
@@ -72,7 +69,7 @@ function LogoCarousel() {
           }}
           transition={{
             x: {
-              duration: animationSpeed, // Adjusted speed here
+              duration: animationSpeed, 
               repeat: Infinity,
               ease: "linear"
             }
