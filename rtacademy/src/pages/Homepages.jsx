@@ -10,15 +10,13 @@ import CommentReview from '../components/CommentReview'
 import bgvideo from '../assets/videos/bgcyber.mp4';
 import Navbar from '../components/common/navbar';
 import { motion } from 'framer-motion';
+import Footer from '../components/common/Footer';
 
 function HomePage() {
   return (
     <div className="min-h-screen bg-[#0A1525]">
       <Navbar />
-      
-      {/* Hero Section with Video and Gradients */}
       <div className="relative min-h-[85vh]">
-        {/* Video Background with Multiple Gradient Overlays */}
         <div className="absolute inset-0">
           <video 
             className="object-cover w-full h-full"
@@ -29,10 +27,8 @@ function HomePage() {
           >
             <source src={bgvideo} type="video/mp4" />
           </video>
-          {/* Gradient Overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0A1525]/90 via-[#0A1525]/70 to-[#0A1525]/90"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A1525] via-transparent to-[#0A1525]/50"></div>
-          {/* Bottom gradient for smooth transition */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A1525] to-transparent"></div>
         </div>
 
@@ -120,13 +116,13 @@ function HomePage() {
       </div>
 
       {/* Additional Sections */}
-      <ContainerNews />
       <CyberIncidentsStats />
       <CybersecurityDashboard />
       <PreviewWeb />
       <Webreview/>
       <CoursesReview/>
       <CommentReview/>
+      <Footer/>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import HomePage from './pages/Homepages';
 import Price from './pages/price';
 import './styles/main.css'; 
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/harga" element={<Price />} />
           <Route path="login" element={<Login/>} />
+          <Route path="Register" element={<Register/>} />
         </Routes>
       </div>
     </Router>
