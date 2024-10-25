@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import cardimg from '../assets/images/Frontend.png';
+import frontend from '../assets/images/Frontend1.png';
+import backend from '../assets/images/Backend.png';
+import fullstack from '../assets/images/Fullstack.png'
 
 const SolutionsLayout = () => {
   const [activeTeam, setActiveTeam] = useState('red');
@@ -19,7 +21,7 @@ const SolutionsLayout = () => {
 
   const teamContent = {
     red: {
-      image: cardimg,
+      image: frontend,
       imageAlt: "Frontend Development",
       title: "Kuasai pengembangan Aplikasi Web Di bidang Frontend Dengan Teknologi Web3",
       description: "Untuk Developer Frontend yang bertujuan mengembangkan aplikasi web Berstandar Nasional",
@@ -31,7 +33,7 @@ const SolutionsLayout = () => {
       ]
     },
     blue: {
-      image: cardimg,
+      image: backend,
       imageAlt: "Backend Development",
       title: "Build robust backend systems and scalable architectures.",
       description: "For developers specializing in server-side logic and database management.",
@@ -43,7 +45,7 @@ const SolutionsLayout = () => {
       ]
     },
     purple: {
-      image: cardimg,
+      image: fullstack,
       imageAlt: "Full Stack Development",
       title: "Combine frontend and backend for complete web solutions.",
       description: "For developers seeking to master both frontend and backend into fullstack development.",
