@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Lock, Mail } from 'lucide-react';
@@ -38,14 +38,24 @@ const LoginPage = () => {
           className="p-8 border border-gray-700 bg-gray-800/50 backdrop-blur-xl rounded-2xl md:p-12"
         >
           {/* Logo */}
-          <motion.div 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", duration: 0.8 }}
-            className="flex justify-center mb-8"
-          >
-            <img src={logo} alt="RT Academy Logo" className="h-12" />
-          </motion.div>
+          
+          <motion.div
+  initial={{ scale: 0 }}
+  animate={{ scale: 1 }}
+  transition={{ type: "spring", duration: 0.8 }}
+  className="flex justify-center mb-8"
+>
+  <Link to="/">
+    <motion.img 
+      src={logo} 
+      alt="RT Academy Logo" 
+      className="h-12"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+    />
+  </Link>
+  </motion.div>
 
           {/* Header */}
           <div className="mb-8 text-center">

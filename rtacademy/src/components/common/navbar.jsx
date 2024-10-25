@@ -21,7 +21,7 @@ function Navbar() {
         { to: "/tujuan", label: "Tujuan" },
         { to: "/harga", label: "Harga" },
         { to: "/resources", label: "Resources" },
-        { to: "/perusahaan", label: "Perusahaan" }
+        { to: "/Siswa", label: "Student" }
     ];
 
     return (

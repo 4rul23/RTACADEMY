@@ -62,6 +62,7 @@ const RegisterPage = () => {
           className="p-8 border border-gray-700 bg-gray-800/50 backdrop-blur-xl rounded-2xl md:p-12"
         >
           {/* Logo */}
+          <Link to="/">
           <motion.div 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -69,7 +70,9 @@ const RegisterPage = () => {
             className="flex justify-center mb-8"
           >
             <img src={logo} alt="RT Academy Logo" className="h-12" />
+            
           </motion.div>
+          </Link>
 
           {/* Header */}
           <div className="mb-8 text-center">
