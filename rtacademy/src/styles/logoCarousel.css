@@ -1,57 +1,57 @@
-
-
-
-
-.logo-carousel {
+.logo-carousel-container {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  padding-top: 30px;
-  background: transparent;
-  position: relative;
-  z-index: 3;
-  background-color: rgb(11, 18, 31);
 }
 
+/* Optional: Add smooth scrolling for Safari */
+@supports (-webkit-hyphens: none) {
+  .logo-carousel-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
-.logo-carousel::before,
-.logo-carousel::after {
+/* For dimmed background effect on hover */
+.logo-item::before {
+  content: '';
   position: absolute;
-  top: 0;
-  width: 150px;
-  height: 200%;
-  content: "";
-  z-index: 2;
+  inset: -1px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 232, 255, 0.1),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  pointer-events: none;
 }
 
-.logo-carousel::before {
-  left: 0;
-  background-image: linear-gradient(270deg,transparent 0,rgba(11,18,31,.8) 50%,#0b121f 90%);
-  width: 30%;
+.logo-item:hover::before {
+  opacity: 1;
 }
 
-.logo-carousel::after {
-  right: 0;
-  background-image: linear-gradient(90deg, transparent 0, rgba(11, 18, 31, .8) 50%, #0b121f 90%);
-  width: 30%;
+/* Optional: Add custom scrollbar */
+.logo-carousel-container::-webkit-scrollbar {
+  height: 0;
+  width: 0;
 }
 
-.logo-track {
-  display: flex;
-  animation: scroll 40s linear infinite;
-}
-
-.logo-item {
-  flex: 0 0 auto;
-  margin: 0 2.5rem;
-}
-
-.logo-item img {
-  height: 100px;
-  max-width: 125px;
-  object-fit: contain;
-  padding-bottom: 43px;
-  /* Remove the filter for now */
-  /* filter: brightness(0) invert(1); */
+.logo-scroll {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
 }
 
 @keyframes scroll {
@@ -60,16 +60,5 @@
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-item {
-    margin: 0 1rem;
-  }
-
-  .logo-item img {
-    max-width: 100px;
-    height: auto;
   }
 }

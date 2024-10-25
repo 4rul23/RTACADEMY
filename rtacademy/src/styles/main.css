@@ -15,12 +15,49 @@ body {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+.bg-gray-900 {
+  background-color: #0A1525;
+}
+
+/* Video overlay gradient */
+.bg-gray-900\/70 {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 21, 37, 0.7),
+    rgba(10, 21, 37, 0.9)
+  );
+}
+
+/* Optional: Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A1525;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9FEF00;
+  border-radius: 4px;
+}
+
 .app {
   background-color: rgb(11, 18, 31);
 }
 .content, .navbar, .btn-bussiness, .btn-student, .trial-container {
   position: relative;
   z-index: 3;
+}
+
+.navbar {
+  background-color: #0b121f;
 }
 
 .bg-filter-home {
@@ -111,9 +148,8 @@ body {
 .video-overlay {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 20%;
+  height: 100vh;
   background: rgba(11, 18, 31, 0.714);
   z-index: 1;
 }

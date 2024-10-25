@@ -3,7 +3,7 @@
 .harga {
     background-color: #111927;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'neue-haas-unica', sans-serif;
 }
 
 .container {
@@ -14,16 +14,17 @@
     margin-bottom: 40px;
     margin-top: 40px;
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .paket-wrapper {
     display: flex;
     gap: 50px;
-    margin: 0px 100px 0px 150px;
+    justify-content: center;
 }
 
 .paket-card {
-    background-color: #1A2332;
+    background-color: #1a2332;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -34,6 +35,8 @@
 
 .paket-card h2 {
     font-size: 1.5rem;
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -63,11 +66,11 @@
     background-color: #06b6d4;
     color: #0A121F;
     cursor: pointer;
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    min-width: 160px;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
     margin-top: 1rem;
-    border: none;
-    border-radius: 12px;
     font-weight: 300;
     font-style: bold;
     cursor: pointer;
@@ -106,3 +109,34 @@
     font-weight: 700;
     font-style: bold;
 }
+
+.list-description {
+    font-weight: 550;
+    color: white;
+    line-height: 22px;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.list-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.list-feature {
+    color: #a4b1cd;
+    font-size: 1rem;
+    margin-top: 16px;
+}
+.checkmark-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.checkmark {
+    max-width: 12px;
+    max-height: 12px;
+    margin-right: 1rem;
+}
+

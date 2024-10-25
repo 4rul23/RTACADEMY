@@ -1,5 +1,10 @@
 /* src/styles/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import './main.css';
 @import './logoCarousel.css';
 @import './preview.css';
-@import './Price.css'
+@import './Price.css';
+@import './CoursesReview.css';
+
