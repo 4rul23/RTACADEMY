@@ -1,12 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Layout, Monitor, Book, Award, Users, BookOpen, Code, FileCode, Search, Bell,
+  Layout, Award, Users, BookOpen, Code, FileCode, Search, Bell,
   PlayCircle, Target, Clock, Star, TrendingUp, MessageCircle, Bookmark
 } from 'lucide-react';
 import logo from '../assets/images/logos.png';
+import { useNavigate } from 'react-router-dom';
+import ruanmei from '../assets/images/ruanmei.jfif'
+
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   // Data Models
   const learningStats = [
     { label: 'Total Jam Belajar', value: '24.5 Jam', icon: Clock },
@@ -58,12 +62,6 @@ const Dashboard = () => {
       color: 'green'
     }
   ];
-
-  const learningProgress = {
-    html: 25.5,
-    css: 0,
-    javascript: 0
-  };
 
   const currentCourse = {
     name: "Introduction to HTML",
@@ -150,7 +148,7 @@ const Dashboard = () => {
                   className="flex items-center gap-3 px-3 py-1.5 rounded-lg border border-gray-700 transition-colors"
                 >
                   <img
-                    src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                    src={ruanmei}
                     alt="User"
                     className="w-8 h-8 rounded-lg"
                   />
@@ -178,7 +176,7 @@ const Dashboard = () => {
             >
               <div className="flex items-center gap-4 mb-4">
                 <img
-                  src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                  src={ruanmei}
                   alt="User"
                   className="w-12 h-12 rounded-lg"
                 />
@@ -207,15 +205,16 @@ const Dashboard = () => {
           {/* Navigation */}
           <div className="space-y-2">
             {[
-              { icon: Layout, label: 'Dashboard', active: true },
-              { icon: BookOpen, label: 'Modul Pembelajaran' },
-              { icon: Bookmark, label: 'Learning Path' },
-              { icon: Award, label: 'Sertifikasi' },
-              { icon: Users, label: 'Komunitas' }
+              { icon: Layout, label: 'Dashboard', path: '/academy', active: true },
+              { icon: BookOpen, label: 'Modul Pembelajaran', path: '/module' },
+              { icon: Bookmark, label: 'Learning Path', path: '/learning-path' },
+              { icon: Award, label: 'Sertifikasi', path: '/certification' },
+              { icon: Users, label: 'Komunitas', path: '/community' }
             ].map((item, index) => (
               <motion.button
                 key={index}
                 whileHover={{ x: 4 }}
+                onClick={() => navigate(item.path)}
                 className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all ${
                   item.active 
                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-white border border-cyan-500/20'
@@ -228,7 +227,6 @@ const Dashboard = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Main Content */}
         <div className="flex-1 p-8 ml-64">
           <div className="max-w-6xl mx-auto">

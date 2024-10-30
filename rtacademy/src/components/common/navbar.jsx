@@ -20,8 +20,8 @@ function Navbar() {
         { to: "/produk", label: "Produk" },
         { to: "/tujuan", label: "Tujuan" },
         { to: "/harga", label: "Harga" },
-        { to: "/resources", label: "Resources" },
-        { to: "/Siswa", label: "Student" }
+        { to: "/Resources", label: "Resources" },
+        { to: "/Student", label: "Student" }
     ];
 
     return (
