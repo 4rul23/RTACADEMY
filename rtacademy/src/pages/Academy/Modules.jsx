@@ -8,6 +8,7 @@ import {
 import Navbar from '../../components/common/navbar';
 import logo from '../../assets/images/logos.png';
 import { useNavigate } from 'react-router-dom';
+import ruanmei from '../../assets/images/ruanmei.jfif'
 
 const ModulesPage = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState('all');
@@ -161,7 +162,7 @@ const ModulesPage = () => {
                   className="flex items-center gap-3 px-3 py-1.5 rounded-lg border border-gray-700 transition-colors"
                 >
                   <img
-                    src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                    src={ruanmei}
                     alt="User"
                     className="w-8 h-8 rounded-lg"
                   />
@@ -189,7 +190,7 @@ const ModulesPage = () => {
             >
               <div className="flex items-center gap-4 mb-4">
                 <img
-                  src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                  src={ruanmei}
                   alt="User"
                   className="w-12 h-12 rounded-lg"
                 />
@@ -270,7 +271,7 @@ const ModulesPage = () => {
     <div className="mb-8 space-y-3">
   {/* Filter Groups */}
   <div className="p-4 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl">
-    <div className="grid gap-3 md:grid-cols-3">
+    <div className="grid gap-3 pb-6 md:grid-cols-3">
       {/* Difficulty Filter */}
       <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
         <h3 className="text-sm font-medium text-gray-400">Difficulty</h3>

@@ -1,345 +1,297 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { 
-  School, Book, Beaker, ArrowRight, Users, Code, Terminal,
-  Crown, Settings, HelpCircle, MessageSquare, User,
-  Shield, CreditCard, Bell, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import {
+  Beaker, ArrowRight, Settings, Bell,
+  BookOpen, Star, Activity, Users,  Timer,
+  School, Trophy,  Flame, Target, Lock
 } from 'lucide-react';
-import logo from "../assets/images/logos.png";
+import logo from '../assets/images/logos.png';
+import pwn from '../assets/videos/pwnagotchi-unscreen.gif'
 
-const OptionPage = () => {
+const ChoosePlatform = () => {
   const navigate = useNavigate();
 
-  const options = [
+  const stats = [
+    { icon: Timer, label: 'Learning Time', value: '24.5h' },
+    { icon: Target, label: 'Points', value: '1,234' },
+    { icon: Trophy, label: 'Achievements', value: '15' },
+    { icon: Flame, label: 'Daily Streak', value: '7' }
+  ];
+
+  const platforms = [
     {
-      title: "Dashboard Sekolah",
-      description:
-        "Kelola pembelajaran, pantau progres siswa, dan akses data analitik sekolah Anda",
-      icon: School,
-      path: "/school-dashboard",
+      title: "Learning Path",
+      description: "Mulai perjalanan belajar programming Anda",
+      icon: BookOpen,
+      path: "/academy",
       color: "cyan",
-      isPremium: true,
-      stats: [
-        { label: "Active Students", value: "250+" },
-        { label: "Courses", value: "15" },
-        { label: "Avg. Progress", value: "76%" },
-      ],
+      stats: {
+        completion: "65%",
+        modules: "12",
+        hours: "24.5"
+      },
       features: [
-        { text: "Manajemen Kelas", icon: Users },
-        { text: "Analitik Pembelajaran", icon: Terminal },
-        { text: "Laporan Progres", icon: Code },
-      ],
-    },
-    {
-      title: "Pembelajaran RT-ACADEMY",
-      description:
-        "Akses materi pembelajaran interaktif dan jalur belajar terstruktur",
-      icon: Book,
-      path: "/Academy",
-      color: "blue",
-      stats: [
-        { label: "Available Courses", value: "45+" },
-        { label: "Learning Paths", value: "6" },
-        { label: "Projects", value: "24" },
-      ],
-      features: [
-        { text: "Materi Interaktif", icon: Code },
-        { text: "Video Tutorial", icon: Terminal },
-        { text: "Proyek Praktik", icon: Users },
-      ],
+        "Materi pembelajaran interaktif",
+        "Video tutorial step-by-step",
+        "Proyek praktis",
+        "Quiz & assessments"
+      ]
     },
     {
       title: "Lab RT-ACADEMY",
-      description:
-        "Simulasi dan praktik langsung dengan environment development yang aman",
+      description: "Praktik coding dalam environment yang aman",
       icon: Beaker,
       path: "/lab",
-      color: "purple",
-      stats: [
-        { label: "Practice Labs", value: "30+" },
-        { label: "Challenges", value: "50+" },
-        { label: "Templates", value: "20" },
-      ],
+      color: "blue",
+      stats: {
+        completion: "45%",
+        exercises: "25",
+        projects: "8"
+      },
       features: [
-        { text: "Live Coding", icon: Terminal },
-        { text: "Debugging Tools", icon: Code },
-        { text: "Project Showcase", icon: Users },
-      ],
+        "Live coding environment",
+        "Real-time code preview",
+        "Debugging tools",
+        "Project workspace"
+      ]
     },
+    {
+      title: "School Dashboard",
+      description: "Platform manajemen pembelajaran sekolah",
+      icon: School,
+      path: "/school",
+      color: "purple",
+      isComingSoon: true,
+      stats: {
+        students: "250+",
+        classes: "12",
+        teachers: "8"
+      },
+      features: [
+        "Manajemen kelas",
+        "Progress tracking",
+        "Analytics dashboard",
+        "Resource center"
+      ]
+    }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
-    <div className="min-h-screen bg-[#0A1525] text-white py-12 px-4 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute rounded-full top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 blur-3xl animate-pulse"></div>
-        <div className="absolute delay-1000 rounded-full bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 blur-3xl animate-pulse"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
-      </div>
-
-      <div className="fixed top-0 left-0 right-0 z-50 px-4 border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl">
-  <div className="flex items-center justify-between h-16 mx-auto max-w-7xl">
-    <img src={logo} alt="RT Academy" className="h-8" />
-    <div className="flex items-center gap-6">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="relative p-2 text-gray-400 transition-colors hover:text-white"
-      >
-        <Bell className="w-5 h-5" />
-        <span className="absolute top-0 right-0 w-2 h-2 rounded-full bg-cyan-500"></span>
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={() => navigate('/settings')}
-        className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
-      >
-        <Settings className="w-4 h-4" />
-        Settings
-      </motion.button>
-    </div>
-  </div>
-</div>
-
-
+    
+    <div className="min-h-screen bg-[#0A1525] text-white relative overflow-hidden">
+    {/* Background Elements */}
+    <div className="absolute inset-0 pointer-events-none">
+      {/* Animated Gradient Orbs */}
+      <div className="absolute rounded-full top-1/4 -left-12 w-96 h-96 bg-cyan-500/20 blur-3xl animate-pulse"/>
+      <div className="absolute rounded-full bottom-1/4 -right-12 w-96 h-96 bg-blue-500/20 blur-3xl animate-pulse"/>
+      <div className="absolute delay-150 rounded-full top-3/4 left-1/4 w-96 h-96 bg-purple-500/20 blur-3xl animate-pulse"/>
+      <div className="absolute delay-300 rounded-full bottom-3/4 right-1/4 w-96 h-96 bg-blue-500/20 blur-3xl animate-pulse"/>
       
-      <div className="relative mx-auto max-w-7xl">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-16 text-center"
-        >
-          <img src={logo} alt="RT Academy Logo" className="h-12 mx-auto mb-8" />
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">
-            Selamat Datang di RT Academy
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-gray-400">
-            Pilih platform yang ingin Anda akses untuk memulai perjalanan
-            pembelajaran Anda
-          </p>
-        </motion.div>
+      {/* Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"/>
+      
+      {/* Additional Decorative Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"/>
+    </div>
+      
+      {/* Navbar */}
+      <motion.nav 
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-gray-900/50 backdrop-blur-xl"
+      >
+        <div className="px-6 mx-auto max-w-7xl">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-8">
+              <img src={logo} alt="RT Academy" className="h-8" />
+              <div className="flex gap-6">
+                {[
+                  { label: 'Overview', active: true },
+                  { label: 'My Learning' },
+                  { label: 'Resources' }
+                ].map((item, index) => (
+                  <button
+                    key={index}
+                    className={`text-sm font-medium px-4 py-2 rounded-lg transition-colors ${
+                      item.active 
+                        ? 'bg-cyan-500/10 text-cyan-400' 
+                        : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            </div>
 
-        {/* User Profile Section */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl p-6 mx-auto mb-12 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl"
-        >
-          <div className="flex items-center gap-6">
-            <div className="relative">
-              <img
-                src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
-                alt="Profile"
-                className="w-16 h-16 border-2 rounded-xl border-cyan-500/20"
-              />
-              <div className="absolute -bottom-2 -right-2 p-1.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">
-                <Crown className="w-4 h-4 text-white" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <h2 className="mb-1 text-xl font-bold text-white">
-                Welcome back, Username!
-              </h2>
-              <p className="text-gray-400">Continue your learning journey</p>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">24.5</p>
-                <p className="text-sm text-gray-400">Hours Learned</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">4</p>
-                <p className="text-sm text-gray-400">Certificates</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Recent Activity */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-12"
-        >
-          <div className="p-6 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">
-                Profile & Settings
-              </h3>
+            <div className="flex items-center gap-6">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="relative p-2 text-gray-400 transition-colors hover:text-white"
+              >
+                <Bell className="w-5 h-5" />
+                <span className="absolute top-0 right-0 w-2 h-2 rounded-full bg-cyan-500"/>
+              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => navigate("/settings")}
-                className="px-4 py-2 text-sm border rounded-lg text-cyan-400 border-cyan-500/20 hover:bg-cyan-500/10"
+                onClick={() => navigate('/settings')}
+                className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
               >
-                View All Settings
+                <Settings className="w-4 h-4" />
+                Settings
               </motion.button>
             </div>
-
-            
-
-            {/* Quick Stats */}
-            <div className="grid grid-cols-2 gap-4 p-4 mt-6 border border-gray-700 md:grid-cols-4 rounded-xl bg-gray-900/50">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">24.5h</p>
-                <p className="text-sm text-gray-400">Learning Time</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">4/12</p>
-                <p className="text-sm text-gray-400">Modules Done</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">75%</p>
-                <p className="text-sm text-gray-400">Avg. Score</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white">5</p>
-                <p className="text-sm text-gray-400">Certificates</p>
-              </div>
-            </div>
           </div>
-        </motion.div>
+        </div>
+      </motion.nav>
 
-        {/* Options Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid gap-8 md:grid-cols-3"
-        >
-          {options.map((option) => (
-            <motion.div
-              key={option.title}
-              variants={itemVariants}
-              whileHover={{ y: -5 }}
-              className="relative p-6 transition-all duration-300 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-2xl hover:border-cyan-500/50 group"
-            >
-              {/* Premium Badge */}
-              {option.isPremium && (
-                <div className="absolute px-3 py-1 text-xs font-medium rounded-full top-4 right-4 text-cyan-400 bg-cyan-500/10">
-                  Premium
+      {/* Main Content */}
+      <div className="px-6 pt-24 pb-12">
+        <div className="mx-auto max-w-7xl">
+          {/* Welcome Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="grid gap-8 mb-12 md:grid-cols-2"
+          >
+            <div>
+              <h1 className="mb-4 text-4xl font-bold">Welcome to RT-ACADEMY</h1>
+              <p className="mb-8 text-xl text-gray-400">
+                Pilih jalur pembelajaran Anda dan mulai perjalanan menjadi developer profesional
+              </p>
+              <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.2 }}
+      className="flex items-center justify-center gap-2 mb-8 brightness-0 invert"
+    >
+      <img 
+        src={pwn} 
+        alt="Decorative Emoticon"
+        className="h-256" // Sesuaikan ukuran sesuai kebutuhan
+      />
+    </motion.div>
+
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + (index * 0.1) }}
+                  className="p-6 border border-gray-700 rounded-xl bg-gray-800/50 backdrop-blur-sm"
+                >
+                  <stat.icon className="w-6 h-6 mb-3 text-cyan-400" />
+                  <div className="mb-1 text-2xl font-bold">{stat.value}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Platforms Grid */}
+          <div className="grid gap-8 md:grid-cols-3">
+        {platforms.map((platform, index) => (
+          <motion.div
+            key={platform.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 + (index * 0.1) }}
+            className="relative group"
+          >
+            <div className="h-full p-6 transition-all border border-gray-700 rounded-2xl bg-gray-800/50 backdrop-blur-sm hover:border-cyan-500/50">
+              {/* Coming Soon Badge */}
+              {platform.isComingSoon && (
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-2xl bg-gray-900/80 backdrop-blur-sm">
+                  <div className="p-3 mb-4 rounded-full bg-purple-500/20">
+                    <Lock className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="px-6 py-2 border rounded-full bg-gradient-to-r from-purple-500/20 to-purple-500/10 border-purple-500/20"
+                  >
+                    <span className="text-lg font-bold text-purple-400">Coming Soon</span>
+                  </motion.div>
+                  <p className="px-6 mt-4 text-center text-gray-400">
+                    Platform ini sedang dalam pengembangan.<br/>Stay tuned!
+                  </p>
                 </div>
               )}
 
-              {/* Card Header */}
-              <div
-                className={`relative bg-gradient-to-r from-${option.color}-500/10 to-${option.color}-500/5 p-4 rounded-xl w-fit mb-6 overflow-hidden group-hover:from-${option.color}-500/20 group-hover:to-${option.color}-500/10 transition-colors`}
-              >
-                <option.icon className={`w-8 h-8 text-${option.color}-400`} />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+              <div className="flex items-start gap-4 mb-6">
+                <div className={`p-3 rounded-xl bg-gradient-to-r from-${platform.color}-500/10 to-${platform.color}-500/5`}>
+                  <platform.icon className={`w-8 h-8 text-${platform.color}-400`} />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl font-bold">{platform.title}</h3>
+                  <p className="text-gray-400">{platform.description}</p>
+                </div>
               </div>
 
-              <h2 className="mb-3 text-xl font-semibold">{option.title}</h2>
-              <p className="mb-6 text-gray-400">{option.description}</p>
-
-              {/* Stats Grid */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {option.stats.map((stat, idx) => (
-                  <div
-                    key={idx}
-                    className="p-2 text-center rounded-lg bg-gray-900/50"
-                  >
-                    <p className="text-lg font-bold text-white">{stat.value}</p>
-                    <p className="text-xs text-gray-400">{stat.label}</p>
+                  {/* Statistics */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    {Object.entries(platform.stats).map(([key, value], idx) => (
+                      <div key={idx} className="p-3 text-center rounded-xl bg-gray-900/50">
+                        <div className="text-lg font-bold">{value}</div>
+                        <div className="text-xs text-gray-400 capitalize">{key}</div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
 
-              {/* Features */}
-              <div className="mb-8 space-y-3">
-                {option.features.map((feature, idx) => (
-                  <motion.div
-                    key={idx}
-                    whileHover={{ x: 4 }}
-                    className="flex items-center p-2 text-gray-300 transition-colors rounded-lg hover:bg-gray-700/50"
+                  {/* Features */}
+                  <div className="mb-6 space-y-3">
+                    {platform.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-3 text-gray-300">
+                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Action Button */}
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => navigate(platform.path)}
+                    className="flex items-center justify-center w-full gap-2 px-4 py-3 font-medium text-white rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 group"
                   >
-                    <feature.icon className="w-4 h-4 mr-2 text-cyan-400" />
-                    <span>{feature.text}</span>
-                  </motion.div>
-                ))}
-              </div>
+                    Access Platform
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </motion.button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-              {/* Action Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate(option.path)}
-                className="relative flex items-center justify-center w-full gap-2 px-4 py-3 overflow-hidden font-medium rounded-lg group"
-              >
-                <div className="absolute inset-0 transition-opacity bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:opacity-90" />
-                <span className="relative">Akses {option.title}</span>
-                <ArrowRight className="relative w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </motion.button>
-            </motion.div>
-          ))}
-        </motion.div>
-        
-          
-
-
-        
-        {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex justify-center gap-4 mt-8"
-        >
-          {[
-            { icon: Settings, label: "Settings" },
-            { icon: HelpCircle, label: "Help Center" },
-            { icon: MessageSquare, label: "Support" },
-          ].map((action, index) => (
-            <motion.button
-              key={index}
-              whileHover={{ y: -2 }}
-              className="flex flex-col items-center p-4 text-gray-400 hover:text-gray-300"
-            >
-              <action.icon className="w-5 h-5 mb-1" />
-              <span className="text-sm">{action.label}</span>
-            </motion.button>
-          ))}
-        </motion.div>
-
-        
-
-        {/* Bottom Help Text */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-12 text-center text-gray-400"
-        >
-          Butuh bantuan?{" "}
-          <a href="/help" className="text-cyan-400 hover:text-cyan-300">
-            Hubungi support tim kami
-          </a>
-        </motion.p>
+          {/* Quick Actions */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="flex justify-center gap-6 mt-12 text-gray-400"
+          >
+            <button className="flex items-center gap-2 hover:text-white">
+              <Activity className="w-4 h-4" />
+              View Progress
+            </button>
+            <button className="flex items-center gap-2 hover:text-white">
+              <Star className="w-4 h-4" />
+              Achievements
+            </button>
+            <button className="flex items-center gap-2 hover:text-white">
+              <Users className="w-4 h-4" />
+              Community
+            </button>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default OptionPage;
+export default ChoosePlatform;

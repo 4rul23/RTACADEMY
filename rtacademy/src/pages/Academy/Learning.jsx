@@ -8,6 +8,9 @@ import {
     Boxes,  ChevronRight, Bell, BookOpen, Award, Users, Bookmark
   } from 'lucide-react';
 import logo from '../../assets/images/logos.png';
+import ruanmei from '../../assets/images/ruanmei.jfif'
+
+
 const LearningPathsPage = () => {
     const navigate = useNavigate();
   const learningPaths = [
@@ -164,7 +167,7 @@ const LearningPathsPage = () => {
                   className="flex items-center gap-3 px-3 py-1.5 rounded-lg border border-gray-700 transition-colors"
                 >
                   <img
-                    src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                    src={ruanmei}
                     alt="User"
                     className="w-8 h-8 rounded-lg"
                   />
@@ -192,7 +195,7 @@ const LearningPathsPage = () => {
             >
               <div className="flex items-center gap-4 mb-4">
                 <img
-                  src="https://ui-avatars.com/api/?name=User&background=0A1525&color=fff"
+                  src={ruanmei}
                   alt="User"
                   className="w-12 h-12 rounded-lg"
                 />

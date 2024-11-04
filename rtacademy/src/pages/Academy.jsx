@@ -50,7 +50,7 @@ const Dashboard = () => {
     {
       title: 'HTML Master',
       description: 'Selesaikan semua modul HTML',
-      progress: 25,
+      progress: 90,
       icon: Star,
       color: 'yellow'
     },
@@ -188,12 +188,12 @@ const Dashboard = () => {
               <div>
                 <div className="flex justify-between mb-2 text-sm">
                   <span className="text-gray-400">Progress Belajar</span>
-                  <span className="text-cyan-400">25%</span>
+                  <span className="text-cyan-400">50%</span>
                 </div>
                 <div className="h-2 rounded-full bg-gray-700/50">
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: '25%' }}
+                    animate={{ width: '50%' }}
                     transition={{ duration: 1, delay: 0.5 }}
                     className="h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
                   />

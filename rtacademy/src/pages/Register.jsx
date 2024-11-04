@@ -9,10 +9,9 @@ const RegisterPage = () => {
     fullName: "",
     email: "",
     phone: "",
-    school: "",
     password: "",
     confirmPassword: "",
-    accountType: "personal" // or "school"
+    accountType: "personal" 
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -30,7 +29,6 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsLoading(false);
   };
@@ -61,7 +59,6 @@ const RegisterPage = () => {
           transition={{ duration: 0.6 }}
           className="p-8 border border-gray-700 bg-gray-800/50 backdrop-blur-xl rounded-2xl md:p-12"
         >
-          {/* Logo */}
           <Link to="/">
           <motion.div 
             initial={{ scale: 0 }}
@@ -110,18 +107,7 @@ const RegisterPage = () => {
                 <p className="text-sm text-gray-400">Untuk pembelajaran individu</p>
               </button>
 
-              <button
-                onClick={() => setFormData({ ...formData, accountType: "school" })}
-                className={`flex-1 p-4 rounded-lg border ${
-                  formData.accountType === "school"
-                    ? "border-cyan-500 bg-cyan-500/10"
-                    : "border-gray-700 hover:border-gray-600"
-                } transition-all duration-300`}
-              >
-                <School className="w-6 h-6 mx-auto mb-2 text-cyan-400" />
-                <p className="font-medium text-white">Sekolah</p>
-                <p className="text-sm text-gray-400">Untuk institusi pendidikan</p>
-              </button>
+
             </div>
           </div>
 
