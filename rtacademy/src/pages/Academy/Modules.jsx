@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Layout,  Award, Users, BookOpen,  Search,
-  Clock,  Heart,  Bell,
-  BookOpen as  Layers,  Bookmark, X
-} from 'lucide-react';
-import Navbar from '../../components/common/navbar';
-import logo from '../../assets/images/logos.png';
-import { useNavigate } from 'react-router-dom';
-import ruanmei from '../../assets/images/ruanmei.jfif'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Layout,
+  Award,
+  Users,
+  BookOpen,
+  Search,
+  Clock,
+  Heart,
+  Bell,
+  BookOpen as Layers,
+  Bookmark,
+  X,
+  ArrowRight,
+} from "lucide-react";
+
+import logo from "../../assets/images/logos.png";
+import { useNavigate } from "react-router-dom";
+import ruanmei from "../../assets/images/ruanmei.jfif";
+import html from "../../assets/images/html.webp";
+import css from "../../assets/images/css.webp"
+import javascript from "../../assets/images/javascript.webp";
 
 const ModulesPage = () => {
-  const [selectedDifficulty, setSelectedDifficulty] = useState('all');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedType, setSelectedType] = useState("all");
   const navigate = useNavigate();
-  
 
   const modules = [
     {
@@ -26,9 +37,9 @@ const ModulesPage = () => {
       type: "core",
       sections: 8,
       duration: "2 hours",
-      image: "/path/to/html.jpg",
+      image: html,
       tags: ["Frontend", "Web"],
-      status: "new"
+      status: "new",
     },
     {
       title: "CSS Basics",
@@ -38,9 +49,9 @@ const ModulesPage = () => {
       type: "core",
       sections: 10,
       duration: "3 hours",
-      image: "/path/to/css.jpg",
+      image: css,
       tags: ["Frontend", "Design"],
-      status: "updated"
+      status: "updated",
     },
     {
       title: "JavaScript Essential",
@@ -50,9 +61,9 @@ const ModulesPage = () => {
       type: "core",
       sections: 12,
       duration: "4 hours",
-      image: "/path/to/js.jpg",
+      image: javascript,
       tags: ["Frontend", "Programming"],
-      status: "new"
+      status: "new",
     },
     {
       title: "React Basics",
@@ -64,49 +75,51 @@ const ModulesPage = () => {
       duration: "6 hours",
       image: "/path/to/react.jpg",
       tags: ["Frontend", "Framework"],
-      status: "new"
-    }
+      status: "new",
+    },
   ];
 
   const filterButtons = {
     difficulty: [
-      { label: 'All', value: 'all' },
-      { label: 'Fundamental', value: 'fundamental' },
-      { label: 'Easy', value: 'easy' },
-      { label: 'Medium', value: 'medium' },
-      { label: 'Hard', value: 'hard' }
+      { label: "All", value: "all" },
+      { label: "Fundamental", value: "fundamental" },
+      { label: "Easy", value: "easy" },
+      { label: "Medium", value: "medium" },
+      { label: "Hard", value: "hard" },
     ],
     category: [
-      { label: 'All', value: 'all' },
-      { label: 'Frontend', value: 'frontend' },
-      { label: 'Backend', value: 'backend' },
-      { label: 'Database', value: 'database' }
+      { label: "All", value: "all" },
+      { label: "Frontend", value: "frontend" },
+      { label: "Backend", value: "backend" },
+      { label: "Database", value: "database" },
     ],
     type: [
-      { label: 'All', value: 'all' },
-      { label: 'Core Modules', value: 'core' },
-      { label: 'Mini Modules', value: 'mini' },
-      { label: 'Projects', value: 'project' }
-    ]
+      { label: "All", value: "all" },
+      { label: "Core Modules", value: "core" },
+      { label: "Mini Modules", value: "mini" },
+      { label: "Projects", value: "project" },
+    ],
   };
 
   // Filter logic
-  const filteredModules = modules.filter(module => {
-    const difficultyMatch = selectedDifficulty === 'all' || module.difficulty === selectedDifficulty;
-    const categoryMatch = selectedCategory === 'all' || module.category === selectedCategory;
-    const typeMatch = selectedType === 'all' || module.type === selectedType;
+  const filteredModules = modules.filter((module) => {
+    const difficultyMatch =
+      selectedDifficulty === "all" || module.difficulty === selectedDifficulty;
+    const categoryMatch =
+      selectedCategory === "all" || module.category === selectedCategory;
+    const typeMatch = selectedType === "all" || module.type === selectedType;
     return difficultyMatch && categoryMatch && typeMatch;
   });
 
-  const getDifficultyColor = (difficulty) => {
-    const colors = {
-      fundamental: 'cyan',
-      easy: 'green',
-      medium: 'yellow',
-      hard: 'red'
-    };
-    return colors[difficulty] || 'gray';
-  };
+  // const getDifficultyColor = (difficulty) => {
+  //   const colors = {
+  //     fundamental: "cyan",
+  //     easy: "green",
+  //     medium: "yellow",
+  //     hard: "red",
+  //   };
+  //   return colors[difficulty] || "gray";
+  // };
 
   return (
     <div className="min-h-screen bg-[#0A1525] relative overflow-hidden">
@@ -122,7 +135,7 @@ const ModulesPage = () => {
         <div className="px-6 mx-auto max-w-7xl">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-8"
             >
@@ -157,8 +170,8 @@ const ModulesPage = () => {
                   Upgrade Pro
                 </motion.button>
 
-                <motion.div 
-                  whileHover={{ borderColor: 'rgba(6,182,212,0.5)' }}
+                <motion.div
+                  whileHover={{ borderColor: "rgba(6,182,212,0.5)" }}
                   className="flex items-center gap-3 px-3 py-1.5 rounded-lg border border-gray-700 transition-colors"
                 >
                   <img
@@ -184,8 +197,8 @@ const ModulesPage = () => {
         >
           {/* User Card */}
           <div className="mb-8">
-            <motion.div 
-              whileHover={{ borderColor: 'rgba(6,182,212,0.5)' }}
+            <motion.div
+              whileHover={{ borderColor: "rgba(6,182,212,0.5)" }}
               className="p-4 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl"
             >
               <div className="flex items-center gap-4 mb-4">
@@ -207,7 +220,7 @@ const ModulesPage = () => {
                 <div className="h-2 rounded-full bg-gray-700/50">
                   <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: '25%' }}
+                    animate={{ width: "25%" }}
                     transition={{ duration: 1, delay: 0.5 }}
                     className="h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"
                   />
@@ -219,20 +232,29 @@ const ModulesPage = () => {
           {/* Navigation */}
           <div className="space-y-2">
             {[
-              { icon: Layout, label: 'Dashboard', path: '/academy' },
-              { icon: BookOpen, label: 'Modul Pembelajaran', path: '/module', active: true },
-              { icon: Bookmark, label: 'Learning Path', path: '/learning-path' },
-              { icon: Award, label: 'Sertifikasi', path: '/certification' },
-              { icon: Users, label: 'Komunitas', path: '/community' }
+              { icon: Layout, label: "Dashboard", path: "/academy" },
+              {
+                icon: BookOpen,
+                label: "Modul Pembelajaran",
+                path: "/module",
+                active: true,
+              },
+              {
+                icon: Bookmark,
+                label: "Learning Path",
+                path: "/learning-path",
+              },
+              { icon: Award, label: "Sertifikasi", path: "/certification" },
+              { icon: Users, label: "Komunitas", path: "/community" },
             ].map((item, index) => (
               <motion.button
                 key={index}
                 whileHover={{ x: 4 }}
                 onClick={() => navigate(item.path)}
                 className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all ${
-                  item.active 
-                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-white border border-cyan-500/20'
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
+                  item.active
+                    ? "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-white border border-cyan-500/20"
+                    : "text-gray-400 hover:text-white hover:bg-gray-800/50"
                 }`}
               >
                 <item.icon className="w-5 h-5" />
@@ -242,267 +264,324 @@ const ModulesPage = () => {
           </div>
         </motion.div>
 
-{/* Main Content - Moved 64px from left for sidebar */}
-<div className="flex-1 p-8 ml-64">
-  <div className="max-w-6xl mx-auto">
-    {/* Header Section */}
-    <div className="mb-8">
-      <h1 className="mb-4 text-3xl font-bold text-white">Learning Modules</h1>
-      <div className="flex items-center gap-4">
-        <div className="relative flex-1 max-w-2xl">
-          <Search className="absolute w-5 h-5 text-gray-400 transform -translate-y-1/2 left-4 top-1/2" />
-          <input
-            type="text"
-            placeholder="Search modules..."
-            className="w-full py-3 pl-12 pr-4 text-gray-300 transition-colors border border-gray-700 rounded-xl bg-gray-800/50 placeholder:text-gray-500 focus:outline-none focus:border-cyan-500"
-          />
-        </div>
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="px-4 py-3 font-medium text-white rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500"
-        >
-          My Progress
-        </motion.button>
-      </div>
-    </div>
-
-    {/* Filter Sections */}
-    <div className="mb-8 space-y-3">
-  {/* Filter Groups */}
-  <div className="p-4 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl">
-    <div className="grid gap-3 pb-6 md:grid-cols-3">
-      {/* Difficulty Filter */}
-      <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
-        <h3 className="text-sm font-medium text-gray-400">Difficulty</h3>
-        <div className="flex flex-wrap gap-2">
-          {filterButtons.difficulty.map((button) => (
-            <motion.button
-              key={button.value}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setSelectedDifficulty(button.value)}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
-                selectedDifficulty === button.value
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium'
-                  : 'bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80'
-              }`}
-            >
-              {button.label}
-            </motion.button>
-          ))}
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
-        <h3 className="text-sm font-medium text-gray-400">Category</h3>
-        <div className="flex flex-wrap gap-2">
-          {filterButtons.category.map((button) => (
-            <motion.button
-              key={button.value}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setSelectedCategory(button.value)}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
-                selectedCategory === button.value
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium'
-                  : 'bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80'
-              }`}
-            >
-              {button.label}
-            </motion.button>
-          ))}
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
-        <h3 className="text-sm font-medium text-gray-400">Category</h3>
-        <div className="flex flex-wrap gap-2">
-          {filterButtons.category.map((button) => (
-            <motion.button
-              key={button.value}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setSelectedCategory(button.value)}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
-                selectedCategory === button.value
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium'
-                  : 'bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80'
-              }`}
-            >
-              {button.label}
-            </motion.button>
-          ))}
-        </div>
-      </div>
-
-      {/* Active Filters Display */}
-  {(selectedDifficulty !== 'all' || selectedCategory !== 'all' || selectedType !== 'all') && (
-    <div className="flex items-center gap-4">
-      <span className="text-sm text-gray-400">Active Filters:</span>
-      <div className="flex flex-wrap gap-2">
-        {selectedDifficulty !== 'all' && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={() => setSelectedDifficulty('all')}
-            className="inline-flex items-center gap-1 px-2 py-1 text-sm rounded-lg text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20"
-          >
-            {filterButtons.difficulty.find(b => b.value === selectedDifficulty)?.label}
-            <X className="w-4 h-4" />
-          </motion.button>
-        )}
-        {selectedCategory !== 'all' && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={() => setSelectedCategory('all')}
-            className="inline-flex items-center gap-1 px-2 py-1 text-sm text-blue-400 rounded-lg bg-blue-500/10 hover:bg-blue-500/20"
-          >
-            {filterButtons.category.find(b => b.value === selectedCategory)?.label}
-            <X className="w-4 h-4" />
-          </motion.button>
-        )}
-        {selectedType !== 'all' && (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            onClick={() => setSelectedType('all')}
-            className="inline-flex items-center gap-1 px-2 py-1 text-sm text-purple-400 rounded-lg bg-purple-500/10 hover:bg-purple-500/20"
-          >
-            {filterButtons.type.find(b => b.value === selectedType)?.label}
-            <X className="w-4 h-4" />
-          </motion.button>
-        )}
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          onClick={() => {
-            setSelectedDifficulty('all');
-            setSelectedCategory('all');
-            setSelectedType('all');
-          }}
-          className="px-2 py-1 text-sm text-gray-400 rounded-lg hover:text-white hover:bg-gray-700/50"
-        >
-          Clear All
-        </motion.button>
-      </div>
-    </div>
-  )}
-</div>
-
-      {/* Type Filter */}
-      <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
-        <h3 className="text-sm font-medium text-gray-400">Module Type</h3>
-        <div className="flex flex-wrap gap-2">
-          {filterButtons.type.map((button) => (
-            <motion.button
-              key={button.value}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setSelectedType(button.value)}
-              className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
-                selectedType === button.value
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium'
-                  : 'bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80'
-              }`}
-            >
-              {button.label}
-            </motion.button>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-
-    {/* Modules Grid */}
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {filteredModules.map((module, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="relative overflow-hidden transition-all duration-300 border border-gray-700 group bg-gray-800/50 backdrop-blur-sm rounded-xl hover:border-cyan-500/50"
-        >
-          {/* Module Header */}
-          <div className="relative h-48">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
-            <div className="absolute flex items-center justify-between w-full p-4">
-              <div className="flex gap-2">
-                {module.status === 'new' && (
-                  <span className="px-2 py-1 text-xs font-semibold rounded-full bg-cyan-500/20 text-cyan-400">
-                    NEW
-                  </span>
-                )}
-                {module.status === 'updated' && (
-                  <span className="px-2 py-1 text-xs font-semibold text-blue-400 rounded-full bg-blue-500/20">
-                    UPDATED
-                  </span>
-                )}
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-2 transition-colors rounded-lg hover:bg-gray-700/50"
-              >
-                <Heart className="w-5 h-5 text-gray-400" />
-              </motion.button>
-            </div>
-            <div className="absolute bottom-0 w-full p-4">
-              <h3 className="mb-2 text-xl font-bold text-white">
-                {module.title}
-              </h3>
-              <p className="text-gray-300">
-                {module.description}
-              </p>
-            </div>
-          </div>
-
-          {/* Module Info */}
-          <div className="p-4">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {module.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="px-2 py-1 text-xs text-gray-300 rounded-lg bg-gray-700/50"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div className="flex items-center justify-between text-sm text-gray-400">
+        {/* Main Content - Moved 64px from left for sidebar */}
+        <div className="flex-1 p-8 ml-64">
+          <div className="max-w-6xl mx-auto">
+            {/* Header Section */}
+            <div className="mb-8">
+              <h1 className="mb-4 text-3xl font-bold text-white">
+                Learning Modules
+              </h1>
               <div className="flex items-center gap-4">
-                <span className="flex items-center gap-1">
-                  <Layers className="w-4 h-4" />
-                  {module.sections} Sections
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {module.duration}
-                </span>
+                <div className="relative flex-1 max-w-2xl">
+                  <Search className="absolute w-5 h-5 text-gray-400 transform -translate-y-1/2 left-4 top-1/2" />
+                  <input
+                    type="text"
+                    placeholder="Search modules..."
+                    className="w-full py-3 pl-12 pr-4 text-gray-300 transition-colors border border-gray-700 rounded-xl bg-gray-800/50 placeholder:text-gray-500 focus:outline-none focus:border-cyan-500"
+                  />
+                </div>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="px-4 py-3 font-medium text-white rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500"
+                >
+                  My Progress
+                </motion.button>
               </div>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-3 py-1 text-white rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500"
-              >
-                Start
-              </motion.button>
             </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</div>
 
+            {/* Filter Sections */}
+            <div className="mb-8 space-y-3">
+              {/* Filter Groups */}
+              <div className="p-4 border border-gray-700 bg-gray-800/50 backdrop-blur-sm rounded-xl">
+                <div className="grid gap-3 pb-6 md:grid-cols-3">
+                  {/* Difficulty Filter */}
+                  <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
+                    <h3 className="text-sm font-medium text-gray-400">
+                      Difficulty
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {filterButtons.difficulty.map((button) => (
+                        <motion.button
+                          key={button.value}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => setSelectedDifficulty(button.value)}
+                          className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
+                            selectedDifficulty === button.value
+                              ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium"
+                              : "bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80"
+                          }`}
+                        >
+                          {button.label}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Category Filter */}
+                  <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
+                    <h3 className="text-sm font-medium text-gray-400">
+                      Category
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {filterButtons.category.map((button) => (
+                        <motion.button
+                          key={button.value}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => setSelectedCategory(button.value)}
+                          className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
+                            selectedCategory === button.value
+                              ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium"
+                              : "bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80"
+                          }`}
+                        >
+                          {button.label}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Category Filter */}
+                  <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
+                    <h3 className="text-sm font-medium text-gray-400">
+                      Category
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {filterButtons.category.map((button) => (
+                        <motion.button
+                          key={button.value}
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => setSelectedCategory(button.value)}
+                          className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
+                            selectedCategory === button.value
+                              ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium"
+                              : "bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80"
+                          }`}
+                        >
+                          {button.label}
+                        </motion.button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Active Filters Display */}
+                  {(selectedDifficulty !== "all" ||
+                    selectedCategory !== "all" ||
+                    selectedType !== "all") && (
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm text-gray-400">
+                        Active Filters:
+                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedDifficulty !== "all" && (
+                          <motion.button
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            onClick={() => setSelectedDifficulty("all")}
+                            className="inline-flex items-center gap-1 px-2 py-1 text-sm rounded-lg text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20"
+                          >
+                            {
+                              filterButtons.difficulty.find(
+                                (b) => b.value === selectedDifficulty
+                              )?.label
+                            }
+                            <X className="w-4 h-4" />
+                          </motion.button>
+                        )}
+                        {selectedCategory !== "all" && (
+                          <motion.button
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            onClick={() => setSelectedCategory("all")}
+                            className="inline-flex items-center gap-1 px-2 py-1 text-sm text-blue-400 rounded-lg bg-blue-500/10 hover:bg-blue-500/20"
+                          >
+                            {
+                              filterButtons.category.find(
+                                (b) => b.value === selectedCategory
+                              )?.label
+                            }
+                            <X className="w-4 h-4" />
+                          </motion.button>
+                        )}
+                        {selectedType !== "all" && (
+                          <motion.button
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            onClick={() => setSelectedType("all")}
+                            className="inline-flex items-center gap-1 px-2 py-1 text-sm text-purple-400 rounded-lg bg-purple-500/10 hover:bg-purple-500/20"
+                          >
+                            {
+                              filterButtons.type.find(
+                                (b) => b.value === selectedType
+                              )?.label
+                            }
+                            <X className="w-4 h-4" />
+                          </motion.button>
+                        )}
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => {
+                            setSelectedDifficulty("all");
+                            setSelectedCategory("all");
+                            setSelectedType("all");
+                          }}
+                          className="px-2 py-1 text-sm text-gray-400 rounded-lg hover:text-white hover:bg-gray-700/50"
+                        >
+                          Clear All
+                        </motion.button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Type Filter */}
+                <div className="p-3 space-y-2 border border-gray-700 rounded-lg bg-gray-900/50">
+                  <h3 className="text-sm font-medium text-gray-400">
+                    Module Type
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {filterButtons.type.map((button) => (
+                      <motion.button
+                        key={button.value}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => setSelectedType(button.value)}
+                        className={`px-3 py-1.5 text-sm rounded-lg transition-all ${
+                          selectedType === button.value
+                            ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium"
+                            : "bg-gray-800/80 text-gray-400 hover:text-white hover:bg-gray-700/80"
+                        }`}
+                      >
+                        {button.label}
+                      </motion.button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  {filteredModules.map((module, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      className="relative overflow-hidden transition-all duration-300 border border-gray-800 group bg-gray-900/50 backdrop-blur-sm rounded-xl hover:border-cyan-500/50"
+    >
+      {/* Module Header/Image Section */}
+      <div className="relative h-56">
+        {/* Background Image */}
+        <img 
+          src={module.image} 
+          alt={module.title}
+          className="absolute inset-0 object-cover w-full h-full"
+        />
+        
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
+        
+        {/* Status & Actions */}
+        <div className="absolute flex items-center justify-between top-4 left-4 right-4">
+          {/* Status Badge */}
+          <div className="flex gap-2">
+            {module.status === 'new' && (
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="px-3 py-1.5 text-xs font-medium rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/20 backdrop-blur-sm"
+              >
+                NEW
+              </motion.span>
+            )}
+            {module.status === 'updated' && (
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="px-3 py-1.5 text-xs font-medium rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/20 backdrop-blur-sm"
+              >
+                UPDATED
+              </motion.span>
+            )}
+          </div>
+          
+          {/* Favorite Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="p-2 text-gray-400 transition-colors border rounded-full bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover:text-white hover:bg-gray-700/50"
+          >
+            <Heart className="w-5 h-5" />
+          </motion.button>
+        </div>
+
+        {/* Module Info Overlay */}
+        <div className="absolute bottom-4 left-4 right-4">
+          <h3 className="mb-2 text-2xl font-bold text-white transition-colors group-hover:text-cyan-400">
+            {module.title}
+          </h3>
+          <p className="text-sm text-gray-300 line-clamp-2">
+            {module.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Module Content */}
+      <div className="p-4">
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-4">
+          {module.tags.map((tag, idx) => (
+            <span
+              key={idx}
+              className="px-3 py-1.5 text-xs font-medium text-gray-300 rounded-full bg-gray-800/80 border border-gray-700/50"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Module Stats & Action */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-2 text-sm text-gray-400">
+              <Layers className="w-4 h-4 text-cyan-400" />
+              {module.sections} Sections
+            </span>
+            <span className="flex items-center gap-2 text-sm text-gray-400">
+              <Clock className="w-4 h-4 text-blue-400" />
+              {module.duration}
+            </span>
+          </div>
+          
+          <motion.button
+            whileHover={{ scale: 1.05, x: 5 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white transition-opacity rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90"
+          >
+            Start Learning
+            <ArrowRight className="w-4 h-4" />
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Hover Effects - Gradient Border */}
+      <div className="absolute inset-0 rounded-xl p-[1px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-sm" />
+      </div>
+    </motion.div>
+  ))}
+</div>
+          </div>
+        </div>
       </div>
     </div>
   );

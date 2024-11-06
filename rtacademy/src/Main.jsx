@@ -17,6 +17,7 @@ import ModulesPage from './pages/Academy/Modules.jsx'
 import LearningPath from './pages/Academy/Learning.jsx'
 import Setting from './pages/AccountSettings.jsx'
 import Lab from './pages/Lab.jsx'
+import CourseViewer from './pages/htmlcourse.jsx'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/learning-path" element={<LearningPath />} />
           <Route path="/settings" element={<Setting />} />
           <Route path="/Lab" element={<Lab />} />
+          <Route path="/html-course" element={<CourseViewer />} />
         </Routes>
       </div>
     </Router>
