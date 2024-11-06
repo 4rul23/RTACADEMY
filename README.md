@@ -14,8 +14,12 @@ TLDR
 
 ## Preview of the website (Beta)
 
-![Screenshot 2024-09-30 080838](https://github.com/user-attachments/assets/37ef0f4f-866a-40f8-a5ab-c9875bf9c0eb)
+![image](https://github.com/user-attachments/assets/b55de8d1-0bd8-40a6-899a-ba29292441ac)
 
+
+## Preview of the Academy Dashboard (Beta) 
+
+![image](https://github.com/user-attachments/assets/0acf511d-9a9b-49e3-85d7-d8a37ec56afd)
 
 
 
