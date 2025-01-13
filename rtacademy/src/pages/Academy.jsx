@@ -11,7 +11,6 @@ import ruanmei from '../assets/images/ruanmei.jfif'
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  // Data Models
   const learningStats = [
     { label: 'Total Jam Belajar', value: '24.5 Jam', icon: Clock },
     { label: 'Module Selesai', value: '3/12', icon: FileCode },

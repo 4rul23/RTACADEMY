@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
-  ChevronLeft,  
+  ChevronLeft,
   CheckCircle,
   Share2,
   Bookmark,
@@ -14,16 +14,16 @@ import {
   PlayCircle,
   Settings,
   Maximize2,
-  Layout
-} from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+  Layout,
+} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CourseViewer = () => {
-    const navigate = useNavigate();
-    const [menuOpen, setMenuOpen] = useState(true);
-    const [currentSection, setCurrentSection] = useState(0);
-    const [editorTheme, setEditorTheme] = useState('dark');
-    const [codeContent, setCodeContent] = useState(`<!DOCTYPE html>
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(true);
+  const [currentSection, setCurrentSection] = useState(0);  
+  const [editorTheme, setEditorTheme] = useState("dark");
+  const [codeContent, setCodeContent] = useState(`<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -35,7 +35,7 @@ const CourseViewer = () => {
   </body>
   </html>`);
 
-  // Sample course data
+  // sample ddata
   const courseData = {
     title: "Pengantar HTML",
     progress: 25,
@@ -46,16 +46,16 @@ const CourseViewer = () => {
         subsections: [
           { title: "Perkenalan", completed: true },
           { title: "Prasyarat Teknis", completed: true },
-          { title: "Mekanisme Belajar", completed: true }
-        ]
+          { title: "Mekanisme Belajar", completed: true },
+        ],
       },
       {
         title: "Pendahuluan",
         completed: true,
         subsections: [
           { title: "Pengenalan Front-end", completed: true },
-          { title: "Struktur Website", completed: true }
-        ]
+          { title: "Struktur Website", completed: true },
+        ],
       },
       {
         title: "Pengantar HTML",
@@ -66,15 +66,16 @@ const CourseViewer = () => {
           { title: "Latihan: Identifikasi Elemen", completed: false },
           { title: "Anatomi Elemen HTML", completed: false },
           { title: "Attribute di Elemen HTML", completed: false },
-          { title: "Anatomi Dokumen HTML", completed: false }
+          { title: "Anatomi Dokumen HTML", completed: false },
         ],
-        active: true
-      }
+        active: true,
+      },
     ],
     currentContent: {
       title: "Pengantar HTML",
-      description: "Pada modul sebelumnya, Anda sudah belajar banyak hal sebagai penuntun Anda memasuki front-end web development. Ada banyak pengetahuan yang telah diserap, seperti cara internet bekerja, website dan halaman web, web server, dan web browser. Selain itu, kamu juga sudah memahami anatomi dari website sehingga memahami komponen vital pembangun website."
-    }
+      description:
+        "Pada modul sebelumnya, Anda sudah belajar banyak hal sebagai penuntun Anda memasuki front-end web development. Ada banyak pengetahuan yang telah diserap, seperti cara internet bekerja, website dan halaman web, web server, dan web browser. Selain itu, kamu juga sudah memahami anatomi dari website sehingga memahami komponen vital pembangun website.",
+    },
   };
 
   return (
@@ -82,17 +83,17 @@ const CourseViewer = () => {
       {/* Background Elements */}
       <div className="fixed inset-0 pointer-events-none">
         {/* Animated Gradient Orbs */}
-        <div className="absolute rounded-full top-1/4 -left-12 w-96 h-96 bg-cyan-500/20 blur-3xl animate-pulse"/>
-        <div className="absolute rounded-full bottom-1/4 -right-12 w-96 h-96 bg-blue-500/20 blur-3xl animate-pulse"/>
-        <div className="absolute delay-150 rounded-full top-3/4 left-1/4 w-96 h-96 bg-purple-500/20 blur-3xl animate-pulse"/>
-        
+        <div className="absolute rounded-full top-1/4 -left-12 w-96 h-96 bg-cyan-500/20 blur-3xl animate-pulse" />
+        <div className="absolute rounded-full bottom-1/4 -right-12 w-96 h-96 bg-blue-500/20 blur-3xl animate-pulse" />
+        <div className="absolute delay-150 rounded-full top-3/4 left-1/4 w-96 h-96 bg-purple-500/20 blur-3xl animate-pulse" />
+
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"/>
-        
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:44px_44px]" />
+
         {/* Additional Decorative Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"/>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent" />
       </div>
-      
+
       {/* Sidebar Navigation */}
       <motion.div
         initial={{ x: menuOpen ? 0 : -320 }}
@@ -105,7 +106,7 @@ const CourseViewer = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/module')}
+              onClick={() => navigate("/module")}
               className="p-2 rounded-lg hover:bg-gray-800"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -133,18 +134,24 @@ const CourseViewer = () => {
             <div key={sectionIndex} className="border-b border-gray-800">
               <button
                 className={`w-full px-4 py-3 flex items-center justify-between hover:bg-gray-800/50 ${
-                  section.active ? 'bg-cyan-500/10' : ''
+                  section.active ? "bg-cyan-500/10" : ""
                 }`}
               >
                 <div className="flex items-center gap-3">
                   {section.completed ? (
                     <CheckCircle className="w-5 h-5 text-green-400" />
                   ) : (
-                    <div className={`w-5 h-5 rounded-full border-2 ${
-                      section.active ? 'border-cyan-500' : 'border-gray-600'
-                    }`} />
+                    <div
+                      className={`w-5 h-5 rounded-full border-2 ${
+                        section.active ? "border-cyan-500" : "border-gray-600"
+                      }`}
+                    />
                   )}
-                  <span className={section.active ? 'text-cyan-400' : 'text-gray-300'}>
+                  <span
+                    className={
+                      section.active ? "text-cyan-400" : "text-gray-300"
+                    }
+                  >
                     {section.title}
                   </span>
                 </div>
@@ -154,7 +161,9 @@ const CourseViewer = () => {
                   key={subIndex}
                   onClick={() => setCurrentSection(subIndex)}
                   className={`w-full pl-12 pr-4 py-2 flex items-center gap-3 hover:bg-gray-800/50 ${
-                    currentSection === subIndex ? 'bg-cyan-500/10 text-cyan-400' : 'text-gray-400'
+                    currentSection === subIndex
+                      ? "bg-cyan-500/10 text-cyan-400"
+                      : "text-gray-400"
                   }`}
                 >
                   {subsection.completed ? (
@@ -171,7 +180,11 @@ const CourseViewer = () => {
       </motion.div>
 
       {/* Main Content Area */}
-      <div className={`flex-1 ${menuOpen ? 'ml-80' : 'ml-0'} transition-all duration-300`}>
+      <div
+        className={`flex-1 ${
+          menuOpen ? "ml-80" : "ml-0"
+        } transition-all duration-300`}
+      >
         {/* Top Navigation */}
         <div className="sticky top-0 z-40 border-b border-gray-800 bg-gray-900/95 backdrop-blur-xl">
           <div className="flex items-center justify-between h-16 px-6">
@@ -182,9 +195,15 @@ const CourseViewer = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="p-2 rounded-lg hover:bg-gray-800"
               >
-                {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {menuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </motion.button>
-              <h1 className="text-lg font-semibold">{courseData.currentContent.title}</h1>
+              <h1 className="text-lg font-semibold">
+                {courseData.currentContent.title}
+              </h1>
             </div>
             <div className="flex items-center gap-4">
               <motion.button
@@ -205,8 +224,8 @@ const CourseViewer = () => {
           </div>
         </div>
 
-{/* Content Area */}
-<div className="max-w-6xl p-8 mx-auto">
+        {/* Content Area */}
+        <div className="max-w-6xl p-8 mx-auto">
           {/* Course Header */}
           <div className="mb-8">
             <div className="flex items-center gap-4 mb-4">
@@ -214,7 +233,9 @@ const CourseViewer = () => {
                 <Code className="w-6 h-6 text-cyan-400" />
               </div>
               <div>
-                <h2 className="text-3xl font-bold">{courseData.currentContent.title}</h2>
+                <h2 className="text-3xl font-bold">
+                  {courseData.currentContent.title}
+                </h2>
                 <p className="text-gray-400">Module 3 of 12</p>
               </div>
             </div>
@@ -223,13 +244,15 @@ const CourseViewer = () => {
             </p>
           </div>
 
-                    {/* Interactive Code Editor Section */}
-                    <div className="mb-8">
+          {/* Interactive Code Editor Section */}
+          <div className="mb-8">
             <div className="overflow-hidden border border-gray-800 rounded-xl bg-gray-900/50 backdrop-blur-sm">
               {/* Editor Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-gray-800/50">
                 <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium text-gray-300">index.html</span>
+                  <span className="text-sm font-medium text-gray-300">
+                    index.html
+                  </span>
                   <div className="flex gap-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -260,7 +283,7 @@ const CourseViewer = () => {
                   </motion.button>
                 </div>
               </div>
-              
+
               {/* Code Editor */}
               <div className="p-4 font-mono text-sm">
                 <pre className="text-gray-300 whitespace-pre-wrap">
@@ -335,7 +358,7 @@ const CourseViewer = () => {
               whileHover={{ scale: 1.02, x: -5 }}
               whileTap={{ scale: 0.98 }}
               className="flex items-center gap-2 px-4 py-2 text-gray-400 rounded-lg hover:text-white hover:bg-gray-800"
-            >
+            > 
               <ArrowLeft className="w-4 h-4" />
               Previous Lesson
             </motion.button>

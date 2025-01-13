@@ -9,7 +9,7 @@ import CommentReview from '../components/CommentReview'
 import bgvideo from '../assets/videos/bgcyber.mp4';
 import Navbar from '../components/common/navbar';
 import { motion } from 'framer-motion';
-import Footer from '../components/common/Footer';
+import Footer from '../components';
 
 function HomePage() {
   return (
@@ -24,6 +24,8 @@ function HomePage() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:44px_44px]"></div>
       </div>
+
+
 
       <Navbar />
       
@@ -176,4 +178,4 @@ function HomePage() {
   );
 }
 
-export default HomePage ;
+export default HomePage ; 

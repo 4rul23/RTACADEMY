@@ -6,7 +6,6 @@ import logo from "../assets/images/logos.png";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  // Move useNavigate inside the component
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
